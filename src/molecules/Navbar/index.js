@@ -1,55 +1,23 @@
-import React, { memo } from "react";
+import React, { memo, useState } from "react";
+import Logo from "images/logo.svg";
+import Container from "atoms/Container";
+import Hamburger from "atoms/Hamburger";
+import Menu from "./Menu";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar__inside">
-          <div class="navbar__logo">
-            <strong>
-              <small>Igreja Presbiteriana Conservadora</small>
-              Jardim São Pedro
-            </strong>
+    <nav className="absolute top-0 left-0 right-0 bg-black-86 py-4 lg:py-6">
+      <Container>
+        <div className="flex items-center justify-between">
+          <div className="navbar__logo">
+            <Logo className="w-10 lg:w-14" />
           </div>
-          <div class="navbar__hamburguer jsHamburguer">
-            <div class="line"></div>
-          </div>
-          <div class="navbar__menu jsMenu">
-            <div class="menu">
-              <div class="menu__link">
-                <a class="jsMenuLink" href="#informativos">
-                  Informativos
-                </a>
-              </div>
-              <div class="menu__link">
-                <a class="jsMenuLink" href="#onde-estamos">
-                  Onde estamos
-                </a>
-              </div>
-              <div class="menu__link">
-                <a class="jsMenuLink" href="#conheca">
-                  Conheça
-                </a>
-              </div>
-              <div class="menu__link">
-                <a class="jsMenuLink" href="#lideres">
-                  Pastor
-                </a>
-              </div>
-              <div class="menu__link">
-                <a class="jsMenuLink" href="#contribua">
-                  Contribua
-                </a>
-              </div>
-              <div class="menu__link">
-                <a class="jsMenuLink" href="#contato">
-                  Contato
-                </a>
-              </div>
-            </div>
-          </div>
+          <Hamburger onClick={setMenuOpen} className="lg:hidden" />
+          <Menu active={menuOpen} />
         </div>
-      </div>
+      </Container>
     </nav>
   );
 };

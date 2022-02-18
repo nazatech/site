@@ -1,13 +1,11 @@
-import React, { memo } from "react";
+import React, { Fragment, memo } from "react";
 import Navbar from "molecules/Navbar";
-
-import "style/main.css";
 
 const IndexPage = () => {
   return (
-    <div>
+    <Fragment>
       <Navbar />
-    </div>
+    </Fragment>
   );
 };
 

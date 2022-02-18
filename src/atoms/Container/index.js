@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 
-const Container = () => {
-  return <div></div>;
+const Container = ({ children }) => {
+  return <div className="px-4 mx-auto max-w-6xl">{children}</div>;
 };
 
 export default memo(Container);
