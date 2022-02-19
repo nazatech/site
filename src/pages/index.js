@@ -1,12 +1,13 @@
 import React, { Fragment, memo } from "react";
 import Navbar from "molecules/Navbar";
-import { PageHeader } from "molecules";
+import { PageHeader, AboutUs } from "molecules";
 
 const IndexPage = () => {
   return (
     <Fragment>
       <Navbar />
       <PageHeader />
+      <AboutUs />
     </Fragment>
   );
 };
