@@ -2,19 +2,6 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Run Tailwind on startup",
-      "type": "shell",
-      "command": "npx tailwindcss -i ./src/style/tailwind.css -o ./src/style/main.css --watch",
-      "windows": {
-        "command": "npx tailwindcss -i ./src/style/tailwind.css -o ./src/style/main.css --watch"
-      },
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      },
-      "runOptions": { "runOn": "folderOpen" }
-    },
-    {
       "label": "Run Gatsby Develop on startup",
       "type": "shell",
       "command": "yarn run start",

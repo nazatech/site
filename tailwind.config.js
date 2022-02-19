@@ -5,7 +5,37 @@ module.exports = {
       colors: {
         "black-86": "rgba(0, 0, 0, 0.86);",
       },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateY(0px)", opacity: 0 },
+          "50%": { transform: "translateY(5px)", opacity: 1 },
+          "100%": { transform: "translateY(10px)", opacity: 0 },
+        },
+        fade: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+        "fade-up": {
+          "0%": { transform: "translateY(5px)", opacity: 0 },
+          "100%": { transform: "translateY(0px)", opacity: 1 },
+        },
+        width: {
+          "0%": { opacity: 0, width: 0 },
+          "100%": { opacity: 1, width: "100%" },
+        },
+      },
+      animation: {
+        scroll: "scroll 2s cubic-bezier(0.4, 0, 1, 1) infinite",
+        fade: "fade 2s cubic-bezier(0.4, 0, 1, 1) ",
+        width: "width 2s ease forwards",
+        "fade-up": "fade-up 2s ease forwards",
+      },
+    },
+    fontFamily: {
+      sans: ["Raleway", "ui-sans-serif", "system-ui"],
+      display: ["Raleway", "ui-sans-serif", "system-ui"],
+      body: ["Raleway", "ui-sans-serif", "system-ui"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animation-delay")],
 };
