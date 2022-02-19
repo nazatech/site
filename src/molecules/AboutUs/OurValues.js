@@ -5,14 +5,18 @@ import Target from "images/target.svg";
 import Peace from "images/peace.svg";
 import Christian from "images/christian.svg";
 import { addClassOnScrollOver } from "utils";
+import { useIsMobile } from "hooks";
 
 const Card = React.forwardRef(({ title, text, Icon, isLast }, ref) => {
+  const isMobile = useIsMobile();
+
   return (
     <article
       ref={ref}
       className={clsx(
         !isLast && "mr-10 lg:mr-9",
-        "min-w-[245px] lg:max-w-[350px] opacity-0"
+        !isMobile && "opacity-0",
+        "min-w-[245px] lg:max-w-[350px] "
       )}
     >
       <div className="pb-6 lg:pb-4">{Icon}</div>
@@ -29,13 +33,14 @@ const OurValues = () => {
   const card1 = useRef();
   const card2 = useRef();
   const card3 = useRef();
+  const cards = useRef();
+
+  const isMobile = useIsMobile();
 
   useEffect(() => {
-    if (title.current && card1.current && card2.current && card3.current) {
-      addClassOnScrollOver({
-        target: title.current,
-        className: "opacity-100",
-      });
+    const cardsRendered = card1.current && card2.current && card3.current;
+
+    if (cardsRendered && !isMobile) {
       addClassOnScrollOver({
         target: card1.current,
         className: "animate-fade-right",
@@ -51,7 +56,22 @@ const OurValues = () => {
         delay: 1000,
       });
     }
-  }, [title, card1, card2, card3]);
+
+    if (cards && isMobile) {
+      addClassOnScrollOver({
+        target: cards.current,
+        className: "animate-fade-right",
+      });
+    }
+
+    if (title.current) {
+      addClassOnScrollOver({
+        target: title.current,
+        className: "opacity-100",
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [title, card1, card2, card3, cards]);
 
   return (
     <div className="pl-4 py-14 mx-auto max-w-6xl lg:py-20">
@@ -62,7 +82,7 @@ const OurValues = () => {
         Nossos Valores
       </h2>
 
-      <div className="flex overflow-x-auto lg:overflow-x-visible">
+      <div className="flex overflow-x-auto lg:overflow-x-visible" ref={cards}>
         <Card
           ref={card1}
           title="Somos um povo com uma missão"
