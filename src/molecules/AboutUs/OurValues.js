@@ -39,17 +39,16 @@ const OurValues = () => {
       addClassOnScrollOver({
         target: card1.current,
         className: "animate-fade-right",
-        delay: 500,
       });
       addClassOnScrollOver({
         target: card2.current,
         className: "animate-fade-right",
-        delay: 1000,
+        delay: 500,
       });
       addClassOnScrollOver({
         target: card3.current,
         className: "animate-fade-right",
-        delay: 1500,
+        delay: 1000,
       });
     }
   }, [title, card1, card2, card3]);
