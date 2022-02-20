@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       colors: {
         "black-86": "rgba(0, 0, 0, 0.86);",
+        blue: "#002638",
       },
       keyframes: {
         scroll: {
@@ -57,5 +58,8 @@ module.exports = {
       body: ["Raleway", "ui-sans-serif", "system-ui"],
     },
   },
-  plugins: [require("tailwindcss-animation-delay")],
+  plugins: [
+    require("tailwindcss-animation-delay"),
+    require("tailwind-scrollbar-hide"),
+  ],
 };

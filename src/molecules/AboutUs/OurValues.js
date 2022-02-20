@@ -6,6 +6,7 @@ import Peace from "images/peace.svg";
 import Christian from "images/christian.svg";
 import { addClassOnScrollOver } from "utils";
 import { useIsMobile } from "hooks";
+import ScrollSlide from "atoms/ScrollSlide";
 
 const Card = React.forwardRef(({ title, text, Icon, isLast }, ref) => {
   const isMobile = useIsMobile();
@@ -82,7 +83,7 @@ const OurValues = () => {
         Nossos Valores
       </h2>
 
-      <div className="flex overflow-x-auto lg:overflow-x-visible" ref={cards}>
+      <ScrollSlide ref={cards}>
         <Card
           ref={card1}
           title="Somos um povo com uma missão"
@@ -104,7 +105,7 @@ const OurValues = () => {
           text="Como membros da Igreja do Deus vivo, espalhada ao redor do mundo e através da história, nos unimos aos verdadeiros cristãos na proclamação do senhorio absoluto de Jesus Cristo. "
           Icon={<Christian />}
         />
-      </div>
+      </ScrollSlide>
     </div>
   );
 };
