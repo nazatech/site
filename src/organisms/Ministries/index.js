@@ -2,12 +2,10 @@ import React, { Fragment, memo } from "react";
 import { ScrollSlide, Section } from "atoms";
 import clsx from "clsx";
 
-import { Button } from "atoms";
-
+import { Button, AnimateOnScrollOver } from "atoms";
 import { useModal } from "hooks";
 
 import image from "images/imagem-da-igreja.png";
-import FadeOnScrollOver from "atoms/FadeOnScrollOver";
 
 const Content = ({ title, content }) => {
   return (
@@ -37,7 +35,7 @@ const Card = ({ delay = 0 }) => {
   };
 
   return (
-    <FadeOnScrollOver fadeOnMobile={false} delay={delay}>
+    <AnimateOnScrollOver animateOnMobile={false} delay={delay}>
       <div
         className={clsx(
           "lg:max-w-[350px] cursor-pointer lg:hover:scale-105 transition mr-5 lg:mr-0"
@@ -52,7 +50,7 @@ const Card = ({ delay = 0 }) => {
           <p>Ministério da Escola Dominical e Discipulado Internacional</p>
         </article>
       </div>
-    </FadeOnScrollOver>
+    </AnimateOnScrollOver>
   );
 };
 
@@ -67,16 +65,18 @@ const Cards = ({ children }) => {
 const Ministries = () => {
   return (
     <Section withContainer={true} title="Ministérios">
-      <ScrollSlide>
-        <Cards>
-          <Card delay={0} />
-          <Card delay={200} />
-          <Card delay={400} />
-          <Card delay={600} />
-          <Card delay={800} />
-          <Card delay={1000} />
-        </Cards>
-      </ScrollSlide>
+      <AnimateOnScrollOver animation="fade-right" animateOnMobile={true}>
+        <ScrollSlide>
+          <Cards>
+            <Card delay={0} />
+            <Card delay={200} />
+            <Card delay={400} />
+            <Card delay={0} />
+            <Card delay={200} />
+            <Card delay={400} />
+          </Cards>
+        </ScrollSlide>
+      </AnimateOnScrollOver>
     </Section>
   );
 };

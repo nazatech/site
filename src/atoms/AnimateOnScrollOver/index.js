@@ -5,16 +5,22 @@ import { useIsMobile } from "hooks";
 
 import { addClassOnScrollOver } from "utils";
 
-const FadeOnScrollOver = ({ children, delay, fadeOnMobile }) => {
+const AnimateOnScrollOver = ({
+  children,
+  delay,
+  animateOnMobile,
+  animation,
+}) => {
   const ref = useRef();
 
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    if (ref.current) {
+    const shouldAnimate = !(isMobile && !animateOnMobile);
+    if (ref.current && shouldAnimate) {
       addClassOnScrollOver({
         target: ref.current,
-        className: "animate-fade-sm",
+        className: `animate-${animation}`,
         delay,
       });
     }
@@ -22,15 +28,21 @@ const FadeOnScrollOver = ({ children, delay, fadeOnMobile }) => {
   }, [ref]);
 
   return (
-    <span
+    <div
       className={clsx(
-        (fadeOnMobile || !isMobile) && "opacity-0 transition-opacity"
+        (animateOnMobile || !isMobile) && "opacity-0 transition-opacity"
       )}
       ref={ref}
     >
       {children}
-    </span>
+    </div>
   );
 };
 
-export default memo(FadeOnScrollOver);
+AnimateOnScrollOver.defaultProps = {
+  delay: 0,
+  animateOnMobile: true,
+  animation: "fade-sm",
+};
+
+export default memo(AnimateOnScrollOver);

@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import clsx from "clsx";
 
 import { Container } from "atoms";
-import FadeOnScrollOver from "atoms/FadeOnScrollOver";
+import { AnimateOnScrollOver } from "atoms";
 
 const Hero = ({ content }) => {
   return (
@@ -12,7 +12,7 @@ const Hero = ({ content }) => {
       )}
     >
       <Container className="uppercase text-center text-3xl font-bold text-white md:text-6xl ">
-        <FadeOnScrollOver>{content}</FadeOnScrollOver>
+        <AnimateOnScrollOver>{content}</AnimateOnScrollOver>
       </Container>
     </div>
   );

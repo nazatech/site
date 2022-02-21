@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import clsx from "clsx";
-import { FadeOnScrollOver } from "atoms";
+import { AnimateOnScrollOver } from "atoms";
 
 const LinkWrap = ({ children, last, className }) => {
   return (
@@ -36,7 +36,7 @@ const Menu = ({ active }) => {
           : "opacity-0 pointer-events-none"
       )}
     >
-      <FadeOnScrollOver>
+      <AnimateOnScrollOver>
         <div className="pt-20 lg:pt-0">
           <LinkWrap className={active ? "right-0" : "-right-10"}>
             <Href href="#quem-somos">Quem Somos</Href>
@@ -57,7 +57,7 @@ const Menu = ({ active }) => {
             <Href href="#contato">Contato</Href>
           </LinkWrap>
         </div>
-      </FadeOnScrollOver>
+      </AnimateOnScrollOver>
     </div>
   );
 };

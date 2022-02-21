@@ -1,24 +1,18 @@
-import React, { memo, useEffect, useRef } from "react";
+import React, { memo } from "react";
 import clsx from "clsx";
 
-import { useIsMobile } from "hooks";
-import { ScrollSlide, Section } from "atoms";
-
-import { addClassOnScrollOver } from "utils";
+import { ScrollSlide, Section, AnimateOnScrollOver } from "atoms";
 
 import Target from "images/target.svg";
 import Peace from "images/peace.svg";
 import Christian from "images/christian.svg";
 
 const Card = React.forwardRef(({ title, text, Icon, isLast }, ref) => {
-  const isMobile = useIsMobile();
-
   return (
     <article
       ref={ref}
       className={clsx(
         !isLast && "mr-7 lg:mr-9",
-        !isMobile && "opacity-0",
         "min-w-[245px] lg:max-w-[350px] "
       )}
     >
@@ -32,68 +26,44 @@ const Card = React.forwardRef(({ title, text, Icon, isLast }, ref) => {
 });
 
 const OurValues = () => {
-  const card1 = useRef();
-  const card2 = useRef();
-  const card3 = useRef();
-  const cards = useRef();
-
-  const isMobile = useIsMobile();
-
-  useEffect(() => {
-    const cardsRendered = card1.current && card2.current && card3.current;
-
-    if (cardsRendered && !isMobile) {
-      addClassOnScrollOver({
-        target: card1.current,
-        className: "animate-fade-right",
-      });
-      addClassOnScrollOver({
-        target: card2.current,
-        className: "animate-fade-right",
-        delay: 500,
-      });
-      addClassOnScrollOver({
-        target: card3.current,
-        className: "animate-fade-right",
-        delay: 1000,
-      });
-    }
-
-    if (cards && isMobile) {
-      addClassOnScrollOver({
-        target: cards.current,
-        className: "animate-fade-right",
-      });
-    }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [card1, card2, card3, cards]);
-
   return (
     <Section title="Nossos Valores" className="pl-4 mx-auto max-w-6xl">
-      <ScrollSlide ref={cards}>
-        <Card
-          ref={card1}
-          title="Somos um povo com uma missão"
-          text="Fomos enviados ao mundo e respondemos ao chamado de Cristo. Somos
+      <AnimateOnScrollOver animation="fade-right" animateOnMobile={true}>
+        <ScrollSlide>
+          <AnimateOnScrollOver animation="fade-right" animateOnMobile={false}>
+            <Card
+              title="Somos um povo com uma missão"
+              text="Fomos enviados ao mundo e respondemos ao chamado de Cristo. Somos
             capacitados pelo Espírito Santo, para proclamar o Evangelho da Graça e
             cooperar ativamente na edificação da Igreja e na expansão do Reino
             Eterno do SENHOR."
-          Icon={<Target />}
-        />
-        <Card
-          ref={card2}
-          title="Somos um povo de Santidade"
-          text="Somos chamados à santidade pelo Deus Santo. Cremos que batizados no Espírito Santo, podemos seguir a carreira que nos está proposta, e andar à semelhança de Cristo Jesus, nosso SENHOR. "
-          Icon={<Peace />}
-        />
-        <Card
-          ref={card3}
-          title="Somos um povo Cristão"
-          text="Como membros da Igreja do Deus vivo, espalhada ao redor do mundo e através da história, nos unimos aos verdadeiros cristãos na proclamação do senhorio absoluto de Jesus Cristo. "
-          Icon={<Christian />}
-        />
-      </ScrollSlide>
+              Icon={<Target />}
+            />
+          </AnimateOnScrollOver>
+          <AnimateOnScrollOver
+            animation="fade-right"
+            animateOnMobile={false}
+            delay={500}
+          >
+            <Card
+              title="Somos um povo de Santidade"
+              text="Somos chamados à santidade pelo Deus Santo. Cremos que batizados no Espírito Santo, podemos seguir a carreira que nos está proposta, e andar à semelhança de Cristo Jesus, nosso SENHOR. "
+              Icon={<Peace />}
+            />
+          </AnimateOnScrollOver>
+          <AnimateOnScrollOver
+            animation="fade-right"
+            animateOnMobile={false}
+            delay={1000}
+          >
+            <Card
+              title="Somos um povo Cristão"
+              text="Como membros da Igreja do Deus vivo, espalhada ao redor do mundo e através da história, nos unimos aos verdadeiros cristãos na proclamação do senhorio absoluto de Jesus Cristo. "
+              Icon={<Christian />}
+            />
+          </AnimateOnScrollOver>
+        </ScrollSlide>
+      </AnimateOnScrollOver>
     </Section>
   );
 };

@@ -1,5 +1,5 @@
 import { Container } from "atoms";
-import FadeOnScrollOver from "atoms/FadeOnScrollOver";
+import AnimateOnScrollOver from "atoms/AnimateOnScrollOver";
 import React, { Fragment, memo } from "react";
 
 const Section = ({ withContainer, title, className, children }) => {
@@ -7,7 +7,7 @@ const Section = ({ withContainer, title, className, children }) => {
     <Fragment>
       {title && (
         <h2 className="mb-6 text-3xl lg:text-5xl font-extrabold lg:pb-6">
-          <FadeOnScrollOver>{title}</FadeOnScrollOver>
+          <AnimateOnScrollOver>{title}</AnimateOnScrollOver>
         </h2>
       )}
       {children}
