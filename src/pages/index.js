@@ -2,9 +2,15 @@ import React, { memo } from "react";
 
 import { Navbar } from "molecules";
 import { Hero } from "atoms";
-import { Ministries, AboutUs, PageHeader, Schedule } from "organisms";
+import {
+  Donate,
+  SocialProjects,
+  Ministries,
+  AboutUs,
+  PageHeader,
+  Schedule,
+} from "organisms";
 import { ModalProvider } from "contexts/Modal";
-import { SocialProjects } from "organisms";
 
 const IndexPage = () => {
   return (
@@ -16,6 +22,7 @@ const IndexPage = () => {
       <Ministries />
       <Schedule />
       <SocialProjects />
+      <Donate />
     </ModalProvider>
   );
 };

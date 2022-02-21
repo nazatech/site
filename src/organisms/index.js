@@ -4,3 +4,4 @@ export { default as PageHeader } from "./PageHeader";
 export { default as AboutUs } from "./AboutUs";
 export { default as Schedule } from "./Schedule";
 export { default as SocialProjects } from "./SocialProjects";
+export { default as Donate } from "./Donate";

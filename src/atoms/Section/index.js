@@ -9,7 +9,7 @@ const Section = ({ variant, withContainer, title, className, children }) => {
     <Fragment>
       {title && (
         <h2
-          className={clsx("mb-6 text-3xl lg:text-5xl font-extrabold lg:pb-6", {
+          className={clsx("mb-6 text-3xl lg:text-5xl font-extrabold lg:mb-10", {
             "text-white": variant === "secondary",
           })}
         >

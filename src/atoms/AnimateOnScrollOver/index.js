@@ -1,5 +1,6 @@
 import React, { memo, useEffect, useRef } from "react";
 import clsx from "clsx";
+import PropTypes from "prop-types";
 
 import { useIsMobile } from "hooks";
 
@@ -10,6 +11,7 @@ const AnimateOnScrollOver = ({
   delay,
   animateOnMobile,
   animation,
+  className,
 }) => {
   const ref = useRef();
 
@@ -32,7 +34,10 @@ const AnimateOnScrollOver = ({
 
   return (
     <div
-      className={clsx(shouldAnimate && "opacity-0 transition-opacity")}
+      className={clsx(
+        className,
+        shouldAnimate && "opacity-0 transition-opacity"
+      )}
       ref={ref}
     >
       {children}
@@ -44,6 +49,15 @@ AnimateOnScrollOver.defaultProps = {
   delay: 0,
   animateOnMobile: true,
   animation: "animate-fade-sm",
+  className: "",
+};
+
+AnimateOnScrollOver.propTypes = {
+  children: PropTypes.node.isRequired,
+  delay: PropTypes.number,
+  animateOnMobile: PropTypes.bool,
+  animation: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default memo(AnimateOnScrollOver);
