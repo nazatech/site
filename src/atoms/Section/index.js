@@ -1,12 +1,18 @@
-import { Container } from "atoms";
-import AnimateOnScrollOver from "atoms/AnimateOnScrollOver";
 import React, { Fragment, memo } from "react";
+import PropTypes from "prop-types";
+import clsx from "clsx";
 
-const Section = ({ withContainer, title, className, children }) => {
+import { AnimateOnScrollOver, Container } from "atoms";
+
+const Section = ({ variant, withContainer, title, className, children }) => {
   const render = () => (
     <Fragment>
       {title && (
-        <h2 className="mb-6 text-3xl lg:text-5xl font-extrabold lg:pb-6">
+        <h2
+          className={clsx("mb-6 text-3xl lg:text-5xl font-extrabold lg:pb-6", {
+            "text-white": variant === "secondary",
+          })}
+        >
           <AnimateOnScrollOver>{title}</AnimateOnScrollOver>
         </h2>
       )}
@@ -15,10 +21,26 @@ const Section = ({ withContainer, title, className, children }) => {
   );
 
   return (
-    <div className={`py-14 lg:py-20 ${className}`}>
+    <div
+      className={clsx(`py-14 lg:py-20 ${className}`, {
+        "bg-blue": variant === "secondary",
+      })}
+    >
       {withContainer ? <Container>{render()}</Container> : render()}
     </div>
   );
+};
+
+Section.defaultProps = {
+  variant: "primary",
+  withContainer: true,
+  className: "",
+};
+
+Section.propTypes = {
+  variant: PropTypes.oneOf(["primary", "secondary"]),
+  withContainer: PropTypes.bool,
+  title: PropTypes.string,
 };
 
 export default memo(Section);

@@ -4,6 +4,7 @@ import { Navbar } from "molecules";
 import { Hero } from "atoms";
 import { Ministries, AboutUs, PageHeader, Schedule } from "organisms";
 import { ModalProvider } from "contexts/Modal";
+import { SocialProjects } from "organisms";
 
 const IndexPage = () => {
   return (
@@ -14,6 +15,7 @@ const IndexPage = () => {
       <Hero content="Uma família para pertencer" />
       <Ministries />
       <Schedule />
+      <SocialProjects />
     </ModalProvider>
   );
 };
