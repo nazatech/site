@@ -2,8 +2,9 @@ import React, { memo } from "react";
 import clsx from "clsx";
 
 import { Container } from "atoms";
+import FadeOnScrollOver from "atoms/FadeOnScrollOver";
 
-const Hero = ({ children }) => {
+const Hero = ({ content }) => {
   return (
     <div
       className={clsx(
@@ -11,7 +12,7 @@ const Hero = ({ children }) => {
       )}
     >
       <Container className="uppercase text-center text-3xl font-bold text-white md:text-6xl ">
-        {children}
+        <FadeOnScrollOver>{content}</FadeOnScrollOver>
       </Container>
     </div>
   );

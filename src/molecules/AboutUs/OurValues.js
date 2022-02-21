@@ -1,13 +1,14 @@
 import React, { memo, useEffect, useRef } from "react";
 import clsx from "clsx";
 
+import { useIsMobile } from "hooks";
+import { ScrollSlide, Section } from "atoms";
+
+import { addClassOnScrollOver } from "utils";
+
 import Target from "images/target.svg";
 import Peace from "images/peace.svg";
 import Christian from "images/christian.svg";
-import { addClassOnScrollOver } from "utils";
-import { useIsMobile } from "hooks";
-import ScrollSlide from "atoms/ScrollSlide";
-import { Section } from "atoms";
 
 const Card = React.forwardRef(({ title, text, Icon, isLast }, ref) => {
   const isMobile = useIsMobile();
@@ -16,7 +17,7 @@ const Card = React.forwardRef(({ title, text, Icon, isLast }, ref) => {
     <article
       ref={ref}
       className={clsx(
-        !isLast && "mr-10 lg:mr-9",
+        !isLast && "mr-7 lg:mr-9",
         !isMobile && "opacity-0",
         "min-w-[245px] lg:max-w-[350px] "
       )}

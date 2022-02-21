@@ -11,7 +11,7 @@ const IndexPage = () => {
       <Navbar />
       <PageHeader />
       <AboutUs />
-      <Hero>Uma família para pertencer</Hero>
+      <Hero content="Uma família para pertencer" />
       <Ministries />
     </ModalProvider>
   );

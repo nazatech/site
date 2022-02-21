@@ -1,10 +1,13 @@
-import { Section } from "atoms";
-import ScrollSlide from "atoms/ScrollSlide";
 import React, { Fragment, memo } from "react";
+import { ScrollSlide, Section } from "atoms";
+import clsx from "clsx";
+
+import { Button } from "atoms";
+
+import { useModal } from "hooks";
 
 import image from "images/imagem-da-igreja.png";
-import { useModal } from "hooks";
-import { Button } from "atoms";
+import FadeOnScrollOver from "atoms/FadeOnScrollOver";
 
 const Content = ({ title, content }) => {
   return (
@@ -15,7 +18,7 @@ const Content = ({ title, content }) => {
   );
 };
 
-const Card = () => {
+const Card = ({ delay = 0 }) => {
   const { openModal } = useModal();
 
   const onClick = () => {
@@ -34,20 +37,31 @@ const Card = () => {
   };
 
   return (
-    <div className="mr-7 lg:max-w-[350px] cursor-pointer" onClick={onClick}>
-      <div className="pb-4 w-[234px] lg:w-[350px]">
-        <img src={image} alt="Imagem igreja do nazareno" />
+    <FadeOnScrollOver fadeOnMobile={false} delay={delay}>
+      <div
+        className={clsx(
+          "lg:max-w-[350px] cursor-pointer lg:hover:scale-105 transition mr-5 lg:mr-0"
+        )}
+        onClick={onClick}
+      >
+        <div className="pb-4 w-[234px] lg:w-[350px] max-w-full">
+          <img src={image} alt="Imagem igreja do nazareno" />
+        </div>
+        <article>
+          <h4 className="mb-1 font-semibold lg:text-2xl">MEDDI</h4>
+          <p>Ministério da Escola Dominical e Discipulado Internacional</p>
+        </article>
       </div>
-      <article>
-        <h4 className="mb-1 font-semibold lg:text-2xl">MEDDI</h4>
-        <p>Ministério da Escola Dominical e Discipulado Internacional</p>
-      </article>
-    </div>
+    </FadeOnScrollOver>
   );
 };
 
 const Cards = ({ children }) => {
-  return <div className="flex lg:grid lg:grid-cols-3 lg:gap-9">{children}</div>;
+  return (
+    <div className="flex lg:grid lg:grid-cols-3 lg:gap-9 jsTemp">
+      {children}
+    </div>
+  );
 };
 
 const Ministries = () => {
@@ -55,12 +69,12 @@ const Ministries = () => {
     <Section withContainer={true} title="Ministérios">
       <ScrollSlide>
         <Cards>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Card delay={0} />
+          <Card delay={200} />
+          <Card delay={400} />
+          <Card delay={600} />
+          <Card delay={800} />
+          <Card delay={1000} />
         </Cards>
       </ScrollSlide>
     </Section>

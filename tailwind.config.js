@@ -47,7 +47,8 @@ module.exports = {
       },
       animation: {
         scroll: "scroll 2s cubic-bezier(0.4, 0, 1, 1) infinite",
-        fade: "fade 2s cubic-bezier(0.4, 0, 1, 1) ",
+        fade: "fade 2s cubic-bezier(0.4, 0, 1, 1) forwards",
+        "fade-sm": "fade 0.5s cubic-bezier(0.4, 0, 1, 1) forwards",
         width: "width 2s ease forwards",
         "fade-up": "fade-up 2s ease forwards",
         "fade-right": "fade-right 2s ease forwards",
