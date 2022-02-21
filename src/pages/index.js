@@ -1,16 +1,19 @@
-import React, { Fragment, memo } from "react";
-import Navbar from "molecules/Navbar";
-import { PageHeader, AboutUs } from "molecules";
+import React, { memo } from "react";
+
+import { Navbar, PageHeader, AboutUs } from "molecules";
 import { Hero } from "atoms";
+import { Ministries } from "organisms";
+import { ModalProvider } from "contexts/Modal";
 
 const IndexPage = () => {
   return (
-    <Fragment>
+    <ModalProvider>
       <Navbar />
       <PageHeader />
       <AboutUs />
       <Hero>Uma família para pertencer</Hero>
-    </Fragment>
+      <Ministries />
+    </ModalProvider>
   );
 };
 

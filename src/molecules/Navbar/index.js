@@ -1,8 +1,10 @@
 import React, { memo, useState } from "react";
-import Logo from "images/logo.svg";
-import Container from "atoms/Container";
-import Hamburger from "atoms/Hamburger";
+
+import { Container, Hamburger } from "atoms";
+
 import Menu from "./Menu";
+
+import Logo from "images/logo.svg";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

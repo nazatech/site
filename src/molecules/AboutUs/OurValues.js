@@ -7,6 +7,7 @@ import Christian from "images/christian.svg";
 import { addClassOnScrollOver } from "utils";
 import { useIsMobile } from "hooks";
 import ScrollSlide from "atoms/ScrollSlide";
+import { Section } from "atoms";
 
 const Card = React.forwardRef(({ title, text, Icon, isLast }, ref) => {
   const isMobile = useIsMobile();
@@ -30,7 +31,6 @@ const Card = React.forwardRef(({ title, text, Icon, isLast }, ref) => {
 });
 
 const OurValues = () => {
-  const title = useRef();
   const card1 = useRef();
   const card2 = useRef();
   const card3 = useRef();
@@ -65,24 +65,11 @@ const OurValues = () => {
       });
     }
 
-    if (title.current) {
-      addClassOnScrollOver({
-        target: title.current,
-        className: "opacity-100",
-      });
-    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [title, card1, card2, card3, cards]);
+  }, [card1, card2, card3, cards]);
 
   return (
-    <div className="pl-4 py-14 mx-auto max-w-6xl lg:py-20">
-      <h2
-        ref={title}
-        className="mb-6 text-3xl font-extrabold lg:pb-6 opacity-0 transition-opacity duration-1000"
-      >
-        Nossos Valores
-      </h2>
-
+    <Section title="Nossos Valores" className="pl-4 mx-auto max-w-6xl">
       <ScrollSlide ref={cards}>
         <Card
           ref={card1}
@@ -106,7 +93,7 @@ const OurValues = () => {
           Icon={<Christian />}
         />
       </ScrollSlide>
-    </div>
+    </Section>
   );
 };
 
