@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       colors: {
         "black-86": "rgba(0, 0, 0, 0.86);",
+        "black-50": "rgba(0, 0, 0, 0.50);",
         blue: "#002638",
       },
       keyframes: {
