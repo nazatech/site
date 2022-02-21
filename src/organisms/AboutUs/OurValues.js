@@ -28,9 +28,15 @@ const Card = React.forwardRef(({ title, text, Icon, isLast }, ref) => {
 const OurValues = () => {
   return (
     <Section title="Nossos Valores" className="pl-4 mx-auto max-w-6xl">
-      <AnimateOnScrollOver animation="fade-right" animateOnMobile={true}>
+      <AnimateOnScrollOver
+        animation="animate-fade-right"
+        animateOnMobile={true}
+      >
         <ScrollSlide>
-          <AnimateOnScrollOver animation="fade-right" animateOnMobile={false}>
+          <AnimateOnScrollOver
+            animation="animate-fade-right"
+            animateOnMobile={false}
+          >
             <Card
               title="Somos um povo com uma missão"
               text="Fomos enviados ao mundo e respondemos ao chamado de Cristo. Somos
@@ -41,7 +47,7 @@ const OurValues = () => {
             />
           </AnimateOnScrollOver>
           <AnimateOnScrollOver
-            animation="fade-right"
+            animation="animate-fade-right"
             animateOnMobile={false}
             delay={500}
           >
@@ -52,7 +58,7 @@ const OurValues = () => {
             />
           </AnimateOnScrollOver>
           <AnimateOnScrollOver
-            animation="fade-right"
+            animation="animate-fade-right"
             animateOnMobile={false}
             delay={1000}
           >

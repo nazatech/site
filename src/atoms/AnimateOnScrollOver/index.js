@@ -15,23 +15,24 @@ const AnimateOnScrollOver = ({
 
   const isMobile = useIsMobile();
 
+  const shouldAnimate = !(isMobile && !animateOnMobile);
+
   useEffect(() => {
-    const shouldAnimate = !(isMobile && !animateOnMobile);
     if (ref.current && shouldAnimate) {
       addClassOnScrollOver({
         target: ref.current,
-        className: `animate-${animation}`,
+        className: animation,
         delay,
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ref]);
 
+  console.log("shouldAnimate", shouldAnimate);
+
   return (
     <div
-      className={clsx(
-        (animateOnMobile || !isMobile) && "opacity-0 transition-opacity"
-      )}
+      className={clsx(shouldAnimate && "opacity-0 transition-opacity")}
       ref={ref}
     >
       {children}
@@ -42,7 +43,7 @@ const AnimateOnScrollOver = ({
 AnimateOnScrollOver.defaultProps = {
   delay: 0,
   animateOnMobile: true,
-  animation: "fade-sm",
+  animation: "animate-fade-sm",
 };
 
 export default memo(AnimateOnScrollOver);

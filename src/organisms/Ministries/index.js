@@ -55,17 +55,16 @@ const Card = ({ delay = 0 }) => {
 };
 
 const Cards = ({ children }) => {
-  return (
-    <div className="flex lg:grid lg:grid-cols-3 lg:gap-9 jsTemp">
-      {children}
-    </div>
-  );
+  return <div className="flex lg:grid lg:grid-cols-3 lg:gap-9">{children}</div>;
 };
 
 const Ministries = () => {
   return (
     <Section withContainer={true} title="Ministérios">
-      <AnimateOnScrollOver animation="fade-right" animateOnMobile={true}>
+      <AnimateOnScrollOver
+        animation="animate-fade-right"
+        animateOnMobile={true}
+      >
         <ScrollSlide>
           <Cards>
             <Card delay={0} />

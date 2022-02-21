@@ -1,8 +1,7 @@
 import React, { memo } from "react";
 import clsx from "clsx";
 
-import { Container } from "atoms";
-import { AnimateOnScrollOver } from "atoms";
+import { AnimateOnScrollOver, Container } from "atoms";
 
 const Hero = ({ content }) => {
   return (
