@@ -4,7 +4,23 @@ import clsx from "clsx";
 
 import { Container } from "atoms";
 import { useModal } from "hooks";
-import { getScrollbarWidth } from "utils";
+
+const getScrollbarWidth = () => {
+  const outer = document.createElement("div");
+  outer.style.visibility = "hidden";
+  outer.style.overflow = "scroll";
+  outer.style.msOverflowStyle = "scrollbar";
+  document.body.appendChild(outer);
+
+  const inner = document.createElement("div");
+  outer.appendChild(inner);
+
+  const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
+
+  outer.parentNode.removeChild(outer);
+
+  return scrollbarWidth;
+};
 
 const Background = ({ active, onClick }) => {
   return (
