@@ -3,6 +3,7 @@ import React, { memo } from "react";
 import { Navbar } from "molecules";
 import { Hero } from "atoms";
 import {
+  Contact,
   Donate,
   SocialProjects,
   Ministries,
@@ -23,6 +24,7 @@ const IndexPage = () => {
       <Schedule />
       <SocialProjects />
       <Donate />
+      <Contact />
     </ModalProvider>
   );
 };

@@ -30,8 +30,6 @@ const AnimateOnScrollOver = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ref]);
 
-  console.log("shouldAnimate", shouldAnimate);
-
   return (
     <div
       className={clsx(

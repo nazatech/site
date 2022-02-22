@@ -5,3 +5,4 @@ export { default as AboutUs } from "./AboutUs";
 export { default as Schedule } from "./Schedule";
 export { default as SocialProjects } from "./SocialProjects";
 export { default as Donate } from "./Donate";
+export { default as Contact } from "./Contact";
