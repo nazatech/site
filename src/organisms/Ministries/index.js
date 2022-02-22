@@ -35,7 +35,11 @@ const Card = ({ delay = 0 }) => {
   };
 
   return (
-    <AnimateOnScrollOver animateOnMobile={false} delay={delay}>
+    <AnimateOnScrollOver
+      animateOnMobile={false}
+      delay={delay}
+      animation={{ mobile: null, desktop: "animate-fade-sm" }}
+    >
       <div
         className={clsx(
           "lg:max-w-[350px] cursor-pointer lg:hover:scale-105 transition mr-5 lg:mr-0"
@@ -62,17 +66,16 @@ const Ministries = () => {
   return (
     <Section withContainer={true} title="Ministérios">
       <AnimateOnScrollOver
-        animation="animate-fade-right"
-        animateOnMobile={true}
+        animation={{ mobile: "animate-fade-right", desktop: null }}
       >
         <ScrollSlide>
           <Cards>
             <Card delay={0} />
-            <Card delay={200} />
-            <Card delay={400} />
+            <Card delay={500} />
+            <Card delay={1000} />
             <Card delay={0} />
-            <Card delay={200} />
-            <Card delay={400} />
+            <Card delay={500} />
+            <Card delay={1000} />
           </Cards>
         </ScrollSlide>
       </AnimateOnScrollOver>

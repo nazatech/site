@@ -1,28 +1,37 @@
-import React, { memo, useEffect, useRef } from "react";
+import React, { memo, useEffect, useMemo, useRef } from "react";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 
-import { useIsMobile } from "hooks";
-import { addClassOnScrollOver } from "utils";
+import { addClassOnScrollOver, isMobile, isDesktop, isTablet } from "utils";
 
 const AnimateOnScrollOver = ({
   children,
   delay,
-  animateOnMobile,
   animation,
   className,
+  beforeAnimate,
 }) => {
   const ref = useRef();
 
-  const isMobile = useIsMobile();
+  const animate = useMemo(() => {
+    if (isMobile) {
+      return animation.mobile;
+    }
+    if (isTablet) {
+      return animation.tablet;
+    }
+    if (isDesktop) {
+      return animation.desktop;
+    }
 
-  const shouldAnimate = !(isMobile && !animateOnMobile);
+    return null;
+  }, [animation.desktop, animation.mobile, animation.tablet]);
 
   useEffect(() => {
-    if (ref.current && shouldAnimate) {
+    if (ref.current && animate) {
       addClassOnScrollOver({
         target: ref.current,
-        className: animation,
+        className: animate,
         delay,
       });
     }
@@ -30,13 +39,7 @@ const AnimateOnScrollOver = ({
   }, [ref]);
 
   return (
-    <div
-      className={clsx(
-        className,
-        shouldAnimate && "opacity-0 transition-opacity"
-      )}
-      ref={ref}
-    >
+    <div className={clsx(className, animate && beforeAnimate)} ref={ref}>
       {children}
     </div>
   );
@@ -44,16 +47,23 @@ const AnimateOnScrollOver = ({
 
 AnimateOnScrollOver.defaultProps = {
   delay: 0,
-  animateOnMobile: true,
-  animation: "animate-fade-sm",
+  beforeAnimate: "opacity-0 transition-opacity",
+  animation: {
+    mobile: "animate-fade-sm",
+    tablet: "animate-fade-sm",
+    desktop: "animate-fade-sm",
+  },
   className: "",
 };
 
 AnimateOnScrollOver.propTypes = {
   children: PropTypes.node.isRequired,
   delay: PropTypes.number,
-  animateOnMobile: PropTypes.bool,
-  animation: PropTypes.string,
+  animation: PropTypes.shape({
+    mobile: PropTypes.string,
+    tablet: PropTypes.string,
+    desktop: PropTypes.string,
+  }),
   className: PropTypes.string,
 };
 

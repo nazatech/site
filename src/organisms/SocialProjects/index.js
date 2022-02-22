@@ -39,7 +39,13 @@ const Card = ({ delay = 0 }) => {
   };
 
   return (
-    <AnimateOnScrollOver animateOnMobile={false} delay={delay}>
+    <AnimateOnScrollOver
+      animation={{
+        mobile: null,
+        desktop: "animate-fade-sm",
+      }}
+      delay={delay}
+    >
       <div
         className={clsx(
           "lg:max-w-[350px] cursor-pointer lg:hover:scale-105 transition mr-5 lg:mr-0 p-4 bg-white shadow rounded-lg"
@@ -69,14 +75,13 @@ const SocialProjects = () => {
   return (
     <Section title="Projetos Sociais" variant="secondary" withContainer={true}>
       <AnimateOnScrollOver
-        animation="animate-fade-right"
-        animateOnMobile={true}
+        animation={{ mobile: "animate-fade-right", desktop: null }}
       >
         <ScrollSlide>
           <Cards>
             <Card delay={0} />
-            <Card delay={200} />
-            <Card delay={400} />
+            <Card delay={500} />
+            <Card delay={1000} />
           </Cards>
         </ScrollSlide>
       </AnimateOnScrollOver>
