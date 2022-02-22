@@ -4,7 +4,14 @@ import clsx from "clsx";
 
 import { AnimateOnScrollOver, Container } from "atoms";
 
-const Section = ({ variant, withContainer, title, className, children }) => {
+const Section = ({
+  variant,
+  withContainer,
+  title,
+  className,
+  children,
+  id,
+}) => {
   const render = () => (
     <Fragment>
       {title && (
@@ -25,6 +32,7 @@ const Section = ({ variant, withContainer, title, className, children }) => {
       className={clsx(`py-14 lg:py-20 ${className}`, {
         "bg-blue": variant === "secondary",
       })}
+      id={id}
     >
       {withContainer ? <Container>{render()}</Container> : render()}
     </div>

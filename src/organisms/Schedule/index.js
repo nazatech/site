@@ -12,7 +12,7 @@ const DecorativeLine = () => (
 
 const Schedule = () => {
   return (
-    <Section title="Agenda de cultos" withContainer={true}>
+    <Section title="Agenda de cultos" withContainer={true} id="cultos">
       <AnimateOnScrollOver>
         <div className="flex flex-col md:flex-row md:flex-wrap lg:grid lg:grid-cols-3 lg:gap-9">
           <article className="flex flex-col mb-9 w-full">

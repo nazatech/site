@@ -1,13 +1,13 @@
-import React, { Fragment, memo } from "react";
+import React, { memo } from "react";
 import OurValues from "./OurValues";
 import Presentation from "./Presentation";
 
 const AboutUs = () => {
   return (
-    <Fragment>
+    <div id="quem-somos">
       <Presentation />
       <OurValues />
-    </Fragment>
+    </div>
   );
 };
 

@@ -1,13 +1,14 @@
-import React, { memo, useState } from "react";
+import React, { memo } from "react";
 
 import { Container, Hamburger } from "atoms";
+import { useMenu } from "hooks";
 
 import Menu from "./Menu";
 
 import Logo from "images/logo.svg";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const { toggleMenu, isOpen } = useMenu();
 
   return (
     <nav className="absolute top-0 left-0 right-0 bg-black-86 py-4 lg:py-6">
@@ -16,8 +17,12 @@ const Navbar = () => {
           <div className="navbar__logo">
             <Logo className="w-10 lg:w-14" />
           </div>
-          <Hamburger onClick={setMenuOpen} className="lg:hidden" />
-          <Menu active={menuOpen} />
+          <Hamburger
+            isActive={isOpen}
+            onClick={toggleMenu}
+            className="lg:hidden"
+          />
+          <Menu />
         </div>
       </Container>
     </nav>

@@ -1,14 +1,11 @@
-import React, { memo, useState, useCallback } from "react";
+import React, { memo, useCallback } from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
-const Hamburger = ({ initialState, className, onClick }) => {
-  const [isActive, setIsActive] = useState(initialState);
-
+const Hamburger = ({ isActive, className, onClick }) => {
   const toggle = useCallback(() => {
-    setIsActive(!isActive);
-    onClick(!isActive);
-  }, [isActive, onClick]);
+    onClick();
+  }, [onClick]);
 
   return (
     <div

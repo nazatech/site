@@ -73,7 +73,12 @@ const Card = ({ delay = 0 }) => {
 
 const SocialProjects = () => {
   return (
-    <Section title="Projetos Sociais" variant="secondary" withContainer={true}>
+    <Section
+      title="Projetos Sociais"
+      variant="secondary"
+      withContainer={true}
+      id="projetos-sociais"
+    >
       <AnimateOnScrollOver
         animation={{ mobile: "animate-fade-right", desktop: null }}
       >

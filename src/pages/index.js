@@ -12,11 +12,20 @@ import {
   Schedule,
 } from "organisms";
 import { ModalProvider } from "contexts/Modal";
+import { MenuProvider } from "contexts/Menu";
+import { Helmet } from "react-helmet";
 
 const IndexPage = () => {
   return (
     <ModalProvider>
-      <Navbar />
+      <Helmet
+        htmlAttributes={{
+          class: "scroll-smooth",
+        }}
+      />
+      <MenuProvider>
+        <Navbar />
+      </MenuProvider>
       <PageHeader />
       <AboutUs />
       <Hero content="Uma família para pertencer" />

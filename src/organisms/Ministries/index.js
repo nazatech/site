@@ -63,7 +63,7 @@ const Cards = ({ children }) => {
 
 const Ministries = () => {
   return (
-    <Section withContainer={true} title="Ministérios">
+    <Section withContainer={true} title="Ministérios" id="ministerios">
       <AnimateOnScrollOver
         animation={{ mobile: "animate-fade-right", desktop: null }}
       >

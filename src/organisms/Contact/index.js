@@ -10,7 +10,7 @@ import GoogleMaps from "images/google-maps.svg";
 
 const Contact = () => {
   return (
-    <Section variant="secondary" withContainer={true}>
+    <Section id="contato" variant="secondary" withContainer={true}>
       <div className="flex flex-col md:grid md:gap-x-20 md:grid-cols-2">
         <AnimateOnScrollOver>
           <div className="mb-10">

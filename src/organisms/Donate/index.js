@@ -7,7 +7,7 @@ import qrCode from "images/qr-code.png";
 
 const Donate = () => {
   return (
-    <Section title="Dízimos e ofertas" withContainer={true}>
+    <Section title="Dízimos e ofertas" id="contribua" withContainer={true}>
       <div className="flex flex-col md:flex-row md:flex-wrap lg:grid lg:grid-cols-3 lg:gap-9">
         <AnimateOnScrollOver>
           <div className="pb-11">
