@@ -45,7 +45,7 @@ const Card = ({ title, description, contact, responsible, delay = 0 }) => {
     >
       <div
         className={clsx(
-          "lg:max-w-[350px] cursor-pointer lg:hover:scale-105 transition mr-5 lg:mr-0"
+          "lg:max-w-[350px] cursor-pointer lg:hover:scale-105 transition duration-300 mr-5 lg:mr-0"
         )}
         onClick={onClick}
       >
