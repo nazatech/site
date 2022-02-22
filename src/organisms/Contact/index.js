@@ -1,13 +1,12 @@
 import React, { memo } from "react";
 
-import { Container, Section } from "atoms";
+import { Section, AnimateOnScrollOver } from "atoms";
 
 import Instagram from "images/instagram.svg";
 import Facebook from "images/facebook.svg";
 import Email from "images/email.svg";
 import Phone from "images/phone.svg";
 import GoogleMaps from "images/google-maps.svg";
-import { AnimateOnScrollOver } from "atoms";
 
 const Contact = () => {
   return (

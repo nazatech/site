@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 
-import { Navbar } from "molecules";
+import { Navbar, Footer } from "molecules";
 import { Hero } from "atoms";
 import {
   Contact,
@@ -25,6 +25,7 @@ const IndexPage = () => {
       <SocialProjects />
       <Donate />
       <Contact />
+      <Footer />
     </ModalProvider>
   );
 };
