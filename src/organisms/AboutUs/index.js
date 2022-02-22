@@ -4,7 +4,7 @@ import Presentation from "./Presentation";
 
 const AboutUs = () => {
   return (
-    <div id="quem-somos">
+    <div id="quem-somos" className="scroll-mt-[62px]">
       <Presentation />
       <OurValues />
     </div>

@@ -10,7 +10,7 @@ const PageHeader = () => {
   return (
     <div className="bg-black-86 pb-10">
       <Container>
-        <article className="flex items-center flex-col text-center text-white pt-44 pb-28 lg:pt-40">
+        <article className="flex items-center flex-col text-center text-white pt-24 pb-28 lg:pt-20">
           <Logo className="w-36 lg:w-[455px] md:w-60 animate-fade" />
 
           <IgrejaDoNazareno className="animate-fade md:max-w-2xl lg:max-w-full" />

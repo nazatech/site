@@ -1,7 +1,8 @@
-import React, { memo } from "react";
+import React, { memo, useCallback, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import { AnimateOnScrollOver } from "atoms";
 import { useMenu } from "hooks";
+import { isDesktop } from "utils";
 
 const LinkWrap = ({ children, last, className }) => {
   return (
@@ -17,9 +18,40 @@ const LinkWrap = ({ children, last, className }) => {
 };
 
 const Href = ({ children, href, onClick }) => {
+  const [isActive, setIsActive] = useState(false);
+
+  const target = document.querySelector(`${href}`);
+
+  const onScroll = () => {
+    const bounding = target?.getBoundingClientRect();
+
+    if (!isDesktop) {
+      return setIsActive(
+        bounding?.top <= 64 &&
+          window.scrollY < bounding?.height + (target?.offsetTop - 100)
+      );
+    }
+
+    setIsActive(
+      bounding?.top <= 300 &&
+        window.scrollY < bounding?.height + (target?.offsetTop - 300)
+    );
+  };
+
+  useEffect(() => {
+    document.addEventListener("scroll", onScroll);
+
+    return () => document.removeEventListener("scroll", onScroll);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <a
-      className="font-bold text-base leading-5 not-italic no-underline tracking-wider text-white lg:text-sm"
+      className={clsx(
+        "font-bold text-base leading-5 not-italic  tracking-wider text-white lg:text-sm lg:leading-loose underline-offset-[6px]",
+        isActive ? "underline" : "no-underline"
+      )}
       href={href}
       onClick={onClick}
     >

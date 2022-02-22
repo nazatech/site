@@ -28,14 +28,14 @@ const Section = ({
   );
 
   return (
-    <div
-      className={clsx(`py-14 lg:py-20 ${className}`, {
+    <section
+      className={clsx(`py-14 lg:py-20 ${className} scroll-mt-[62px]`, {
         "bg-blue": variant === "secondary",
       })}
       id={id}
     >
       {withContainer ? <Container>{render()}</Container> : render()}
-    </div>
+    </section>
   );
 };
 
