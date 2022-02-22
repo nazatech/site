@@ -22,7 +22,7 @@ export const ministries = [
       short: "Estudo Bíblico para Formação de Obreiros e Líderes",
       full: (
         <article>
-          <p className="font-bold">
+          <p className="font-bold mb-2">
             Aperfeiçoando os santos para a obra do Senhor. (Efésios 4:12)
           </p>
           <ul>
@@ -71,7 +71,7 @@ export const ministries = [
     description: {
       full: (
         <article>
-          <p>
+          <p className="mb-2">
             Nós do Ministério Infantil, somos responsáveis pelo ensino voltado
             às crianças. Além disso, temos a função de ensinar a palavra de Deus
             para os pequeninos. Durante nossa escola Bíblica e culto infantil,
@@ -81,7 +81,7 @@ export const ministries = [
             hoje, serão o futuro da igreja, por isso trabalhamos com muito amor
             e dedicação.
           </p>
-          <p>
+          <p className="mb-2">
             O departamento infantil, trabalha com as crianças de 3 a 11 anos
           </p>
           <p>
@@ -101,12 +101,12 @@ export const ministries = [
     description: {
       full: (
         <article>
-          <p>
+          <p className="mb-2">
             O nome do ministério é esse, pois entendemos que o amor não é um
             sentimento, mas sim uma decisão, pois, mesmo com todas as falhas da
             outra pessoa, você decidiu amá-la.
           </p>
-          <p>
+          <p className="mb-2">
             Nossa principal atuação é na integração entre casais SEM filhos.
             Nossas ações são sempre voltadas para a família, por isso temos
             alguns eventos como a Escola para Dois e Família em dia.
@@ -125,7 +125,7 @@ export const ministries = [
     description: {
       full: (
         <article>
-          <p>
+          <p className="mb-2">
             O ministério Yanni é formado de mulheres que são presente de Deus.
             Trabalhamos com empatia e sororidade, uma ajudando a outra no
             sentido material e espiritual. Somos mulheres de oração que têm sede
