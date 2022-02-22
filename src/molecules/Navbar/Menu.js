@@ -17,10 +17,12 @@ const LinkWrap = ({ children, last, className }) => {
   );
 };
 
+const isBrowser = typeof window !== "undefined";
+
 const Href = ({ children, href, onClick }) => {
   const [isActive, setIsActive] = useState(false);
 
-  const target = document.querySelector(`${href}`);
+  const target = isBrowser ? document.querySelector(`${href}`) : {};
 
   const onScroll = () => {
     const bounding = target?.getBoundingClientRect();
@@ -39,7 +41,7 @@ const Href = ({ children, href, onClick }) => {
   };
 
   useEffect(() => {
-    document.addEventListener("scroll", onScroll);
+    if (isBrowser) document.addEventListener("scroll", onScroll);
 
     return () => document.removeEventListener("scroll", onScroll);
 
