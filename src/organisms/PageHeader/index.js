@@ -19,10 +19,13 @@ const PageHeader = () => {
 
           <CentralBarueri className="animate-fade-up opacity-0 animation-delay-1000 md:max-w-2xl lg:max-w-full" />
         </article>
-        <div className="flex justify-center items-center flex-col animate-scroll cursor-pointer lg:hidden ">
+        <a
+          href="#quem-somos"
+          className="flex justify-center items-center flex-col animate-scroll cursor-pointer lg:hidden "
+        >
           <ArrowDown />
           <ArrowDown />
-        </div>
+        </a>
       </Container>
     </div>
   );
