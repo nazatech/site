@@ -36,7 +36,6 @@ const Card = ({ delay = 0 }) => {
 
   return (
     <AnimateOnScrollOver
-      animateOnMobile={false}
       delay={delay}
       animation={{ mobile: null, desktop: "animate-fade-sm" }}
     >

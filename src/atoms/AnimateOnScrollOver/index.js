@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useMemo, useRef } from "react";
+import React, { memo, useEffect, useMemo, useRef, useState } from "react";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 
@@ -12,6 +12,7 @@ const AnimateOnScrollOver = ({
   beforeAnimate,
 }) => {
   const ref = useRef();
+  const [classNames, setClassNames] = useState("");
 
   const animate = useMemo(() => {
     if (isMobile) {
@@ -38,8 +39,13 @@ const AnimateOnScrollOver = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ref]);
 
+  useEffect(() => {
+    setClassNames(clsx(className, animate && beforeAnimate));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [animate]);
+
   return (
-    <div className={clsx(className, animate && beforeAnimate)} ref={ref}>
+    <div className={classNames} ref={ref}>
       {children}
     </div>
   );
@@ -47,7 +53,7 @@ const AnimateOnScrollOver = ({
 
 AnimateOnScrollOver.defaultProps = {
   delay: 0,
-  beforeAnimate: "opacity-0 transition-opacity",
+  beforeAnimate: "opacity-0",
   animation: {
     mobile: "animate-fade-sm",
     tablet: "animate-fade-sm",
