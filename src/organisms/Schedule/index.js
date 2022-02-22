@@ -25,7 +25,7 @@ const Schedule = () => {
             </div>
 
             <a
-              href="https://example.com"
+              href="https://www.facebook.com/nazarenobarueri/live_videos/?ref=page_internal"
               target="_blank"
               rel="noopener noreferrer "
               className="flex items-end leading-none mb-3"
@@ -35,7 +35,7 @@ const Schedule = () => {
               <TargetBlank />
             </a>
             <a
-              href="https://example.com"
+              href="https://www.youtube.com/channel/UC2lhpdCke5z0URgWuLi_vfw"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-end leading-none"
@@ -52,7 +52,7 @@ const Schedule = () => {
               <DecorativeLine />
             </div>
             <p>
-              <span className="font-extrabold">8h00 - </span> Oração
+              <span className="font-extrabold">7h00 - </span> Oração
             </p>
             <p>
               <span className="font-extrabold">8h45 - </span> Escola Bíblica

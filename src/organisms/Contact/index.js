@@ -25,28 +25,28 @@ const Contact = () => {
             </article>
             <div className="grid grid-cols-4 gap-x-10 w-[248px]">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/nazarenobarueri"
                 target="_blank"
                 rel="noopener noreferrer "
               >
                 <Facebook className="w-[32px] lg:w-10" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/nazarenobarueri"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Instagram className="w-[32px] lg:w-10" />
               </a>
               <a
-                href="https://gmail.com"
+                href="mailto:nazarenobarueri@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Email className="w-[32px] lg:w-10" />
               </a>
               <a
-                href="https://example.com"
+                href="tel:+5511940196122"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -69,7 +69,7 @@ const Contact = () => {
             <article>
               <p className="text-white mb-2">Veja no Google Maps</p>
               <a
-                href="https://example.com"
+                href="https://www.google.com.br/maps/place/Igreja+do+Nazareno+Central+de+Barueri/@-23.4959278,-46.8871642,17z/data=!3m1!4b1!4m5!3m4!1s0x94cf03cd5e9c9b75:0x20f71d3db90308c6!8m2!3d-23.4959278!4d-46.8849755?hl=pt-BR"
                 target="_blank"
                 rel="noopener noreferrer"
               >
