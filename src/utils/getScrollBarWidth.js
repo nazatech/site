@@ -1,4 +1,4 @@
-export const getScrollbarWidth = () => {
+const getScrollbarWidth = () => {
   // Creating invisible container
   const outer = document.createElement("div");
   outer.style.visibility = "hidden";
@@ -18,3 +18,5 @@ export const getScrollbarWidth = () => {
 
   return scrollbarWidth;
 };
+
+export default getScrollbarWidth;

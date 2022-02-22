@@ -1,2 +1,2 @@
-export { addClassOnScrollOver } from "./addClassOnScrollOver";
-export { getScrollbarWidth } from "./getScrollbarWidth";
+export { default as addClassOnScrollOver } from "./addClassOnScrollOver";
+export { default as getScrollbarWidth } from "./getScrollbarWidth";

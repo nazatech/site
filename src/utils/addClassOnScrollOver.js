@@ -1,4 +1,4 @@
-export const addClassOnScrollOver = ({ target, className, delay = 0 } = {}) => {
+const addClassOnScrollOver = ({ target, className, delay = 0 } = {}) => {
   const callback = function (entries) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -13,3 +13,5 @@ export const addClassOnScrollOver = ({ target, className, delay = 0 } = {}) => {
 
   observer.observe(target);
 };
+
+export default addClassOnScrollOver;
