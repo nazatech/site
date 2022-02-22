@@ -6,6 +6,9 @@ import { Button, AnimateOnScrollOver } from "atoms";
 import { useModal } from "hooks";
 
 import image from "images/imagem-da-igreja.png";
+import { ministries } from "./data";
+
+const isBrowser = typeof window !== "undefined";
 
 const Content = ({ title, content }) => {
   return (
@@ -16,19 +19,20 @@ const Content = ({ title, content }) => {
   );
 };
 
-const Card = ({ delay = 0 }) => {
+const Card = ({ title, description, contact, responsible, delay = 0 }) => {
   const { openModal } = useModal();
 
   const onClick = () => {
     openModal({
       children: (
         <Fragment>
-          <Content
-            title="MEDDI - Ministério da Escola Dominical e Discipulado Internacional"
-            content="Fomos enviados ao mundo e respondemos ao chamado de Cristo. Somos capacitados pelo Espírito Santo, para proclamar o Evangelho da Graça e cooperar ativamente na edificação da Igreja e na expansão do Reino Eterno do SENHOR."
-          />
-          <Content title="Responsável" content="Phineas Bresee" />
-          <Button variant="primary">Entre em contato</Button>
+          <Content title={title.full} content={description.full} />
+          <Content title="Responsável" content={responsible} />
+          {contact && isBrowser && (
+            <Button variant="primary" href={contact}>
+              Entre em contato
+            </Button>
+          )}
         </Fragment>
       ),
     });
@@ -49,8 +53,8 @@ const Card = ({ delay = 0 }) => {
           <img src={image} alt="Imagem igreja do nazareno" />
         </div>
         <article>
-          <h4 className="mb-1 font-semibold lg:text-2xl">MEDDI</h4>
-          <p>Ministério da Escola Dominical e Discipulado Internacional</p>
+          <h4 className="mb-1 font-semibold lg:text-2xl">{title.short}</h4>
+          <p>{description.short}</p>
         </article>
       </div>
     </AnimateOnScrollOver>
@@ -62,6 +66,7 @@ const Cards = ({ children }) => {
 };
 
 const Ministries = () => {
+  const delays = [0, 500, 1000, 0, 500, 1000];
   return (
     <Section withContainer={true} title="Ministérios" id="ministerios">
       <AnimateOnScrollOver
@@ -69,12 +74,15 @@ const Ministries = () => {
       >
         <ScrollSlide>
           <Cards>
-            <Card delay={0} />
-            <Card delay={500} />
-            <Card delay={1000} />
-            <Card delay={0} />
-            <Card delay={500} />
-            <Card delay={1000} />
+            {ministries.map((ministry, index) => (
+              <Card
+                title={ministry.title}
+                description={ministry.description}
+                responsible={ministry.responsible}
+                contact={ministry.contact}
+                delay={delays[index]}
+              />
+            ))}
           </Cards>
         </ScrollSlide>
       </AnimateOnScrollOver>

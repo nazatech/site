@@ -4,11 +4,12 @@ import PropTypes from "prop-types";
 import ArrowRight from "images/arrow-right.svg";
 import clsx from "clsx";
 
-const Button = ({ variant, onClick, children }) => {
+const Button = ({ variant, onClick, children, href }) => {
   return (
-    <button
+    <a
+      href={href}
       className={clsx(
-        "p-4 flex items-center justify-center hover:shadow-md hover:scale-105 transition duration-300 active:scale-100 ",
+        "p-4 flex items-center justify-center hover:shadow-md hover:scale-105 transition duration-300 active:scale-100 w-max",
         {
           "bg-blue text-white": variant === "primary",
         }
@@ -17,7 +18,7 @@ const Button = ({ variant, onClick, children }) => {
     >
       <span className="mr-4">{children}</span>
       <ArrowRight />
-    </button>
+    </a>
   );
 };
 
