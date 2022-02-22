@@ -3,7 +3,7 @@ import clsx from "clsx";
 import PropTypes from "prop-types";
 
 import { useIsMobile } from "hooks";
-import addClassOnScrollOver from "utils/addClassOnScrollOver";
+import { addClassOnScrollOver } from "utils";
 
 const AnimateOnScrollOver = ({
   children,

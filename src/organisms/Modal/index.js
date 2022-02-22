@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 import { Container } from "atoms";
 import { useModal } from "hooks";
-import getScrollbarWidth from "utils/getScrollbarWidth";
+import { getScrollbarWidth } from "utils";
 
 const Background = ({ active, onClick }) => {
   return (
