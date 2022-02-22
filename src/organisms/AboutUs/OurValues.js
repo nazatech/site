@@ -35,6 +35,7 @@ const OurValues = () => {
       <AnimateOnScrollOver
         animation={{
           mobile: "animate-fade-right",
+          tablet: "animate-fade-right",
           desktop: null,
         }}
       >

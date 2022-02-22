@@ -14,8 +14,8 @@ const Schedule = () => {
   return (
     <Section title="Agenda de cultos" withContainer={true}>
       <AnimateOnScrollOver>
-        <div className="flex flex-col md:flex-row   lg:grid lg:grid-cols-3 lg:gap-9">
-          <article className="flex flex-col mb-9 ">
+        <div className="flex flex-col md:flex-row md:flex-wrap lg:grid lg:grid-cols-3 lg:gap-9">
+          <article className="flex flex-col mb-9 w-full">
             <div className="mb-1 flex items-center">
               <h4 className="font-extrabold text-2xl">Transmissões ao vivo</h4>
               <span className="rounded block bg-red w-2 h-2 ml-2"></span>
@@ -45,7 +45,7 @@ const Schedule = () => {
               <TargetBlank />
             </a>
           </article>
-          <article className="flex flex-col ">
+          <article className="flex flex-col mb-2 md:mb-0 md:mr-10">
             <h4 className="mb-2 font-extrabold text-2xl">Cultos presenciais</h4>
             <div className="flex items-center mb-2">
               <span className="font-extrabold">Domingo</span>
@@ -62,7 +62,7 @@ const Schedule = () => {
               <span className="font-extrabold">10h00 - </span> Culto
             </p>
           </article>
-          <article className="flex flex-col lg:mt-10">
+          <article className="flex flex-col lg:mt-10 md:mt-10">
             <div className="flex items-center mb-2">
               <span className="font-extrabold">Quarta-feira</span>
               <DecorativeLine />
