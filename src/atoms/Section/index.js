@@ -10,6 +10,7 @@ const Section = ({
   title,
   className,
   children,
+  containerClass,
   id,
 }) => {
   const render = () => (
@@ -34,7 +35,11 @@ const Section = ({
       })}
       id={id}
     >
-      {withContainer ? <Container>{render()}</Container> : render()}
+      {withContainer ? (
+        <Container className={containerClass}>{render()}</Container>
+      ) : (
+        render()
+      )}
     </section>
   );
 };

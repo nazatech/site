@@ -70,8 +70,7 @@ const SocialProjects = () => {
     <Section
       title="Projetos Sociais"
       variant="secondary"
-      withContainer={false}
-      className="pl-4 mx-auto max-w-6xl"
+      containerClass="pr-0 lg:pr-4"
       id="projetos-sociais"
     >
       <AnimateOnScrollOver
