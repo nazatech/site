@@ -7,7 +7,7 @@ const Hero = ({ content }) => {
   return (
     <div
       className={clsx(
-        `py-10 lg:py-32 bg-fixed bg-bottom bg-blue bg-no-repeat bg-contain bg-[url('../images/logo-transparent.png')]`
+        `py-10 lg:py-32 bg-fixed bg-bottom bg-blue bg-no-repeat bg-contain bg-[url('../images/logo-background.png')]`
       )}
     >
       <Container className="uppercase text-center text-3xl font-bold text-white lg:text-6xl ">
