@@ -14,17 +14,12 @@ import {
 import { ModalProvider } from "contexts/Modal";
 import { MenuProvider } from "contexts/Menu";
 import { Helmet } from "react-helmet";
+import SEO from "atoms/SEO";
 
 const IndexPage = () => {
   return (
     <ModalProvider>
-      <Helmet
-        htmlAttributes={{
-          class: "scroll-smooth",
-        }}
-        title="Igreja do Nazareno Central de Barueri"
-        description="Uma comunidade de fé comissionada a levar as Boas Novas da vida em Jesus Cristo às pessoas em todos os lugares e a espalhar a mensagem da santidade bíblica para todos."
-      />
+      <SEO />
       <MenuProvider>
         <Navbar />
       </MenuProvider>

@@ -1,11 +1,31 @@
 const path = require(`path`);
 
+const website = require("./config/website");
+
+const pathPrefix = website.pathPrefix;
+
 module.exports = {
+  pathPrefix: website.pathPrefix,
   siteMetadata: {
-    title: "Nazareno Central de Barueri",
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: website.url + pathPrefix,
+    pathPrefix,
+    title: website.title,
+    titleAlt: website.titleAlt,
+    description: website.description,
+    banner: website.banner,
+    headline: website.headline,
+    siteLanguage: website.siteLanguage,
+    ogLanguage: website.ogLanguage,
+    author: website.author,
+    facebook: website.facebook,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: website.googleAnalyticsID,
+      },
+    },
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
@@ -13,7 +33,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        name: website.title,
+        short_name: website.titleAlt,
+        description: website.description,
+        start_url: pathPrefix,
+        background_color: website.backgroundColor,
+        theme_color: website.themeColor,
+        display: "standalone",
+        icon: website.favicon,
       },
     },
     {
