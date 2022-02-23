@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav
       className={clsx(
-        "sticky top-0 left-0 right-0 bg-black-86 py-4 lg:py-6 z-10 transition-all",
+        "sticky top-0 left-0 right-0 bg-black-86 py-4 lg:py-6 z-10 transition-all backdrop-blur-md",
         {
           "lg:py-4": !isOnPageTop,
         }
