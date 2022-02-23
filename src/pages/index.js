@@ -13,7 +13,6 @@ import {
 } from "organisms";
 import { ModalProvider } from "contexts/Modal";
 import { MenuProvider } from "contexts/Menu";
-import { Helmet } from "react-helmet";
 import SEO from "atoms/SEO";
 
 const IndexPage = () => {
