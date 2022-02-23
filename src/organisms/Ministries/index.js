@@ -76,6 +76,7 @@ const Ministries = () => {
           <Cards>
             {ministries.map((ministry, index) => (
               <Card
+                key={index}
                 title={ministry.title}
                 description={ministry.description}
                 responsible={ministry.responsible}
