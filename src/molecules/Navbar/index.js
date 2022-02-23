@@ -33,7 +33,7 @@ const Navbar = () => {
             />
           </AnimateOnScrollOver>
 
-          <AnimateOnScrollOver delay={500}>
+          <AnimateOnScrollOver delay={1000}>
             <Hamburger
               isActive={isOpen}
               onClick={toggleMenu}
