@@ -36,13 +36,14 @@ const OurValues = () => {
         animation={{
           mobile: "animate-fade-right",
           tablet: "animate-fade-right",
-          desktop: null,
+          desktop: "animate-fade-sm",
         }}
       >
         <ScrollSlide>
           <AnimateOnScrollOver
             animation={{
-              mobile: null,
+              mobile: "animate-fade-sm",
+              tablet: "animate-fade-sm",
               desktop: "animate-fade-right",
             }}
           >
@@ -57,10 +58,11 @@ const OurValues = () => {
           </AnimateOnScrollOver>
           <AnimateOnScrollOver
             animation={{
-              mobile: null,
+              mobile: "animate-fade-sm",
+              tablet: "animate-fade-sm",
               desktop: "animate-fade-right",
             }}
-            delay={500}
+            delay={{ mobile: 0, tablet: 0, desktop: 500 }}
           >
             <Card
               title="Somos um povo de Santidade"
@@ -70,10 +72,11 @@ const OurValues = () => {
           </AnimateOnScrollOver>
           <AnimateOnScrollOver
             animation={{
-              mobile: null,
+              mobile: "animate-fade-sm",
+              tablet: "animate-fade-sm",
               desktop: "animate-fade-right",
             }}
-            delay={1000}
+            delay={{ mobile: 0, tablet: 0, desktop: 1000 }}
           >
             <Card
               title="Somos um povo Cristão"

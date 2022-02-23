@@ -11,8 +11,8 @@ const AnimateOnScrollOver = ({
   className,
   beforeAnimate,
 }) => {
+  const [classNames, setClassNames] = useState(beforeAnimate);
   const ref = useRef();
-  const [classNames, setClassNames] = useState("");
 
   const animate = useMemo(() => {
     if (isMobile) {
@@ -28,21 +28,38 @@ const AnimateOnScrollOver = ({
     return null;
   }, [animation.desktop, animation.mobile, animation.tablet]);
 
+  const useDelay = useMemo(() => {
+    if (delay.all) {
+      return delay.all;
+    }
+
+    if (isMobile) {
+      return delay.mobile;
+    }
+    if (isTablet) {
+      return delay.tablet;
+    }
+    if (isDesktop) {
+      return delay.desktop;
+    }
+
+    return 0;
+  }, [delay.all, delay.desktop, delay.mobile, delay.tablet]);
+
   useEffect(() => {
     if (ref.current && animate) {
       addClassOnScrollOver({
         target: ref.current,
         className: animate,
-        delay,
+        delay: useDelay,
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ref]);
 
   useEffect(() => {
-    setClassNames(clsx(className, animate && beforeAnimate));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [animate]);
+    setClassNames(clsx(className, beforeAnimate));
+  }, [animate, beforeAnimate, className]);
 
   return (
     <div className={classNames} ref={ref}>
@@ -52,7 +69,12 @@ const AnimateOnScrollOver = ({
 };
 
 AnimateOnScrollOver.defaultProps = {
-  delay: 0,
+  delay: {
+    all: 0,
+    desktop: 0,
+    mobile: 0,
+    tablet: 0,
+  },
   beforeAnimate: "opacity-0",
   animation: {
     mobile: "animate-fade-sm",
@@ -64,7 +86,12 @@ AnimateOnScrollOver.defaultProps = {
 
 AnimateOnScrollOver.propTypes = {
   children: PropTypes.node.isRequired,
-  delay: PropTypes.number,
+  delay: PropTypes.shape({
+    all: PropTypes.number,
+    mobile: PropTypes.number,
+    tablet: PropTypes.number,
+    desktop: PropTypes.number,
+  }),
   animation: PropTypes.shape({
     mobile: PropTypes.string,
     tablet: PropTypes.string,

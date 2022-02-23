@@ -74,7 +74,7 @@ const Menu = () => {
           : "opacity-0 pointer-events-none"
       )}
     >
-      <AnimateOnScrollOver delay={1000}>
+      <AnimateOnScrollOver delay={{ all: 1000 }}>
         <div className="pt-20 lg:pt-0">
           <LinkWrap className={isOpen ? "right-0" : "-right-10"}>
             <Href onClick={closeMenu} href="#quem-somos">

@@ -25,7 +25,7 @@ const Navbar = () => {
     >
       <Container>
         <div className="flex items-center justify-between">
-          <AnimateOnScrollOver delay={1000}>
+          <AnimateOnScrollOver delay={{ all: 1000 }}>
             <Logo
               className={clsx("w-10 lg:w-14 transition-all", {
                 "lg:w-10": !isOnPageTop,
@@ -33,7 +33,7 @@ const Navbar = () => {
             />
           </AnimateOnScrollOver>
 
-          <AnimateOnScrollOver delay={1000}>
+          <AnimateOnScrollOver className="z-20" delay={{ all: 1000 }}>
             <Hamburger
               isActive={isOpen}
               onClick={toggleMenu}

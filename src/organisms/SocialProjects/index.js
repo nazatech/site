@@ -20,7 +20,7 @@ const Cards = ({ children }) => {
   return <div className="flex lg:grid lg:grid-cols-3 lg:gap-9">{children}</div>;
 };
 
-const Card = ({ delay = 0 }) => {
+const Card = ({ delay }) => {
   const { openModal } = useModal();
 
   const onClick = () => {
@@ -39,13 +39,7 @@ const Card = ({ delay = 0 }) => {
   };
 
   return (
-    <AnimateOnScrollOver
-      animation={{
-        mobile: null,
-        desktop: "animate-fade-sm",
-      }}
-      delay={delay}
-    >
+    <AnimateOnScrollOver delay={delay}>
       <div
         className={clsx(
           "lg:max-w-[350px] cursor-pointer lg:hover:scale-105 transition duration-300 mr-5 lg:mr-0 p-4 bg-white shadow rounded-lg"
@@ -76,17 +70,22 @@ const SocialProjects = () => {
     <Section
       title="Projetos Sociais"
       variant="secondary"
-      withContainer={true}
+      withContainer={false}
+      className="pl-4 mx-auto max-w-6xl"
       id="projetos-sociais"
     >
       <AnimateOnScrollOver
-        animation={{ mobile: "animate-fade-right", desktop: null }}
+        animation={{
+          mobile: "animate-fade-right",
+          tablet: "animate-fade-right",
+          desktop: "animate-fade-sm",
+        }}
       >
         <ScrollSlide>
           <Cards>
-            <Card delay={0} />
-            <Card delay={500} />
-            <Card delay={1000} />
+            <Card delay={{ all: 0 }} />
+            <Card delay={{ mobile: 0, tablet: 0, desktop: 500 }} />
+            <Card delay={{ mobile: 0, tablet: 0, desktop: 1000 }} />
           </Cards>
         </ScrollSlide>
       </AnimateOnScrollOver>

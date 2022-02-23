@@ -39,10 +39,7 @@ const Card = ({ title, description, contact, responsible, delay = 0 }) => {
   };
 
   return (
-    <AnimateOnScrollOver
-      delay={delay}
-      animation={{ mobile: null, desktop: "animate-fade-sm" }}
-    >
+    <AnimateOnScrollOver delay={delay}>
       <div
         className={clsx(
           "lg:max-w-[350px] cursor-pointer lg:hover:scale-105 transition duration-300 mr-5 lg:mr-0"
@@ -66,11 +63,27 @@ const Cards = ({ children }) => {
 };
 
 const Ministries = () => {
-  const delays = [0, 500, 1000, 0, 500, 1000];
+  const delays = [
+    { all: 0 },
+    { mobile: 0, tablet: 0, desktop: 500 },
+    { mobile: 0, tablet: 0, desktop: 1000 },
+    { all: 0 },
+    { mobile: 0, tablet: 0, desktop: 500 },
+    { mobile: 0, tablet: 0, desktop: 1000 },
+  ];
   return (
-    <Section withContainer={true} title="Ministérios" id="ministerios">
+    <Section
+      withContainer={false}
+      className="pl-4 mx-auto max-w-6xl"
+      title="Ministérios"
+      id="ministerios"
+    >
       <AnimateOnScrollOver
-        animation={{ mobile: "animate-fade-right", desktop: null }}
+        animation={{
+          mobile: "animate-fade-right",
+          tablet: "animate-fade-right",
+          desktop: "animate-fade-sm",
+        }}
       >
         <ScrollSlide>
           <Cards>
