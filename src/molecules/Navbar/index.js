@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 
-import { Container, Hamburger } from "atoms";
+import { Container, Hamburger, AnimateOnScrollOver } from "atoms";
 import { useMenu } from "hooks";
 
 import Menu from "./Menu";
@@ -25,18 +25,21 @@ const Navbar = () => {
     >
       <Container>
         <div className="flex items-center justify-between">
-          <div className="navbar__logo">
+          <AnimateOnScrollOver delay={1000}>
             <Logo
               className={clsx("w-10 lg:w-14 transition-all", {
                 "lg:w-10": !isOnPageTop,
               })}
             />
-          </div>
-          <Hamburger
-            isActive={isOpen}
-            onClick={toggleMenu}
-            className="lg:hidden"
-          />
+          </AnimateOnScrollOver>
+
+          <AnimateOnScrollOver delay={500}>
+            <Hamburger
+              isActive={isOpen}
+              onClick={toggleMenu}
+              className="lg:hidden"
+            />
+          </AnimateOnScrollOver>
           <Menu />
         </div>
       </Container>
