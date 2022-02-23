@@ -25,24 +25,24 @@ module.exports = {
       },
       keyframes: {
         scroll: {
-          "0%": { transform: "translateY(0px)", opacity: 0 },
+          "0%": { transform: "translateY(0px)", opacity: 0.01 },
           "50%": { transform: "translateY(5px)", opacity: 1 },
-          "100%": { transform: "translateY(10px)", opacity: 0 },
+          "100%": { transform: "translateY(10px)", opacity: 0.01 },
         },
         fade: {
-          "0%": { opacity: 0 },
+          "0%": { opacity: 0.01 },
           "100%": { opacity: 1 },
         },
         "fade-up": {
-          "0%": { transform: "translateY(5px)", opacity: 0 },
+          "0%": { transform: "translateY(5px)", opacity: 0.01 },
           "100%": { transform: "translateY(0px)", opacity: 1 },
         },
         "fade-right": {
-          "0%": { transform: "translateX(-20px)", opacity: 0 },
+          "0%": { transform: "translateX(-20px)", opacity: 0.01 },
           "100%": { transform: "translateX(0px)", opacity: 1 },
         },
         width: {
-          "0%": { opacity: 0, width: 0 },
+          "0%": { opacity: 0.01, width: 0 },
           "100%": { opacity: 1, width: "100%" },
         },
       },

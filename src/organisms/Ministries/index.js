@@ -73,8 +73,7 @@ const Ministries = () => {
   ];
   return (
     <Section
-      withContainer={false}
-      className="pl-4 mx-auto max-w-6xl"
+      handleScrollableContent={true}
       title="Ministérios"
       id="ministerios"
     >

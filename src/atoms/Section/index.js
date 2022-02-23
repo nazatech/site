@@ -11,6 +11,7 @@ const Section = ({
   className,
   children,
   containerClass,
+  handleScrollableContent,
   id,
 }) => {
   const render = () => (
@@ -36,7 +37,14 @@ const Section = ({
       id={id}
     >
       {withContainer ? (
-        <Container className={containerClass}>{render()}</Container>
+        <Container
+          className={clsx(
+            handleScrollableContent &&
+              "pl-4 pr-0 mx-auto md:pl-10 md:pr-0 lg:px-10 max-w-6xl"
+          )}
+        >
+          {render()}
+        </Container>
       ) : (
         render()
       )}

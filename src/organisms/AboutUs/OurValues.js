@@ -29,7 +29,7 @@ const OurValues = () => {
   return (
     <Section
       title="Nossos Valores"
-      withContainer={false}
+      handleScrollableContent={true}
       className="pl-4 mx-auto max-w-6xl"
     >
       <AnimateOnScrollOver

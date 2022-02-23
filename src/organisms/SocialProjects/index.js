@@ -46,7 +46,7 @@ const Card = ({ delay }) => {
         )}
         onClick={onClick}
       >
-        <div className="pb-4 w-[234px] lg:w-[350px] max-w-full">
+        <div className="pb-4 w-full min-w-[234px] lg:w-[350px] max-w-full">
           <img src={image} alt="Imagem igreja do nazareno" />
         </div>
         <article>
@@ -70,7 +70,7 @@ const SocialProjects = () => {
     <Section
       title="Projetos Sociais"
       variant="secondary"
-      containerClass="pr-0 lg:pr-4"
+      handleScrollableContent={true}
       id="projetos-sociais"
     >
       <AnimateOnScrollOver

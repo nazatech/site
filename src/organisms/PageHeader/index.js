@@ -15,7 +15,7 @@ const PageHeader = () => {
 
           <IgrejaDoNazareno className="animate-fade md:max-w-2xl lg:max-w-full" />
 
-          <div className="w-full h-[2px] bg-white mt-2 mb-4 animate-width opacity-0 md:max-w-2xl lg:max-w-full" />
+          <div className="w-full h-[2px] bg-white mt-4 mb-4 animate-width opacity-0 md:max-w-2xl lg:max-w-full" />
 
           <CentralBarueri className="animate-fade-up opacity-0 animation-delay-1000 md:max-w-2xl lg:max-w-full" />
         </article>
