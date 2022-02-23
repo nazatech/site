@@ -27,8 +27,8 @@ const Schedule = () => {
             <a
               href="https://www.facebook.com/nazarenobarueri/live_videos/?ref=page_internal"
               target="_blank"
-              rel="noopener noreferrer "
-              className="flex items-end leading-none mb-3"
+              rel="noopener noreferrer"
+              className="flex items-end leading-none mb-3 w-fit"
             >
               <FacebookIcon />
               <span className="underline font-extrabold mx-2">no Facebook</span>
@@ -38,7 +38,7 @@ const Schedule = () => {
               href="https://www.youtube.com/channel/UC2lhpdCke5z0URgWuLi_vfw"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-end leading-none"
+              className="flex items-end leading-none w-fit"
             >
               <YoutubeIcon />
               <span className="underline font-extrabold mx-2">no YouTube</span>
