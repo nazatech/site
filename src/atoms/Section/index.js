@@ -10,7 +10,6 @@ const Section = ({
   title,
   className,
   children,
-  containerClass,
   handleScrollableContent,
   id,
 }) => {

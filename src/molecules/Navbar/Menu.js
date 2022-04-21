@@ -92,8 +92,8 @@ const Menu = () => {
             </Href>
           </LinkWrap>
           <LinkWrap className={isOpen ? "right-0" : "-right-24"}>
-            <Href onClick={closeMenu} href="#projetos-sociais">
-              Projetos Sociais
+            <Href onClick={closeMenu} href="#escola-teologica">
+              Escola Teológica
             </Href>
           </LinkWrap>
           <LinkWrap className={isOpen ? "right-0" : "-right-28"}>
