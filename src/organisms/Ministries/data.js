@@ -115,7 +115,7 @@ export const ministries = [
       full: (
         <article>
           <p>
-            É através da missões Nazarenas Internacionais (MNI) que podemos
+            É através da Missões Nazarenas Internacionais (MNI) que podemos
             ativar, estimular e acelerar a missão local. Nosso propósito é levar
             as boas novas de uma forma simples e objetiva para aqueles que ainda
             não compreenderam a mensagem da salvação. O desafio da grande

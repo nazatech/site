@@ -28,7 +28,7 @@ const Footer = () => {
           <article className="lg:flex lg:justify-between">
             <p className="text-xs mb-6 italic lg:mb-0">
               O nome/logo ”Igreja do Nazareno” é uma marca registrada e seu uso
-              é supervisionado pelo Junta Geral da Igreja do Nazareno.
+              é supervisionado pela Junta Geral da Igreja do Nazareno.
             </p>
             <p className="text-xs">Site feito por Abraão, Gois e Bruna</p>
           </article>
