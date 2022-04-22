@@ -4,9 +4,11 @@ import casadosParaSempre from "images/ministries/casados-para-sempre.png";
 import escolhiAmar from "images/ministries/escolhi-amar.png";
 import mulheresYanni from "images/ministries/mulheres-yanni.png";
 import musica from "images/ministries/musica.png";
+import jni from "images/ministries/jni.png";
 
 export const ministries = [
   {
+    image: jni,
     title: {
       short: "JNI",
       full: "JNI - Jovens Nazarenos Internacional",
