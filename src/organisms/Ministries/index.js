@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { Button, AnimateOnScrollOver } from "atoms";
 import { useModal } from "hooks";
 
-import image from "images/imagem-da-igreja.png";
+import churchImage from "images/imagem-da-igreja.png";
 import { ministries } from "./data";
 
 const isBrowser = typeof window !== "undefined";
@@ -19,7 +19,14 @@ const Content = ({ title, content }) => {
   );
 };
 
-const Card = ({ title, description, contact, responsible, delay = 0 }) => {
+const Card = ({
+  title,
+  image,
+  description,
+  contact,
+  responsible,
+  delay = 0,
+}) => {
   const { openModal } = useModal();
 
   const onClick = () => {
@@ -47,7 +54,11 @@ const Card = ({ title, description, contact, responsible, delay = 0 }) => {
         onClick={onClick}
       >
         <div className="pb-4 w-[234px] lg:w-[350px] max-w-full">
-          <img src={image} alt="Imagem igreja do nazareno" />
+          <img
+            className="rounded-2xl"
+            src={image || churchImage}
+            alt="Imagem igreja do nazareno"
+          />
         </div>
         <article>
           <h4 className="mb-1 font-semibold lg:text-2xl">{title.short}</h4>
@@ -87,14 +98,7 @@ const Ministries = () => {
         <ScrollSlide>
           <Cards>
             {ministries.map((ministry, index) => (
-              <Card
-                key={index}
-                title={ministry.title}
-                description={ministry.description}
-                responsible={ministry.responsible}
-                contact={ministry.contact}
-                delay={delays[index]}
-              />
+              <Card key={index} {...ministry} delay={delays[index]} />
             ))}
           </Cards>
         </ScrollSlide>
