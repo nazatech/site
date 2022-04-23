@@ -40,7 +40,7 @@ const Donate = () => {
               <h4 className="font-extrabold text-2xl ">Pix</h4>
               <p>Utilize o nosso e-mail:</p>
               <p className="mb-2"> nazarenobarueri@gmail.com</p>
-              <img src={qrCode} alt="QR Code para o Pix da Nazareno Barueri" />
+              {/* <img src={qrCode} alt="QR Code para o Pix da Nazareno Barueri" /> */}
             </article>
           </div>
         </AnimateOnScrollOver>
