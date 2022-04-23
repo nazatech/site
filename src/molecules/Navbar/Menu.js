@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useEffect, useRef, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import clsx from "clsx";
 import { AnimateOnScrollOver } from "atoms";
 import { useMenu } from "hooks";
@@ -89,11 +89,6 @@ const Menu = () => {
           <LinkWrap className={isOpen ? "right-0" : "-right-24"}>
             <Href onClick={closeMenu} href="#cultos">
               Cultos
-            </Href>
-          </LinkWrap>
-          <LinkWrap className={isOpen ? "right-0" : "-right-24"}>
-            <Href onClick={closeMenu} href="#escola-teologica">
-              Escola Teológica
             </Href>
           </LinkWrap>
           <LinkWrap className={isOpen ? "right-0" : "-right-28"}>

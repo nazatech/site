@@ -5,7 +5,6 @@ import { Hero } from "atoms";
 import {
   Contact,
   Donate,
-  TheologySchool,
   Ministries,
   AboutUs,
   PageHeader,
@@ -27,7 +26,6 @@ const IndexPage = () => {
       <Hero content="Uma família para pertencer" />
       <Ministries />
       <Schedule />
-      <TheologySchool />
       <Donate />
       <Contact />
       <Footer />
