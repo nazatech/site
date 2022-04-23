@@ -5,6 +5,7 @@ import escolhiAmar from "images/ministries/escolhi-amar.png";
 import mulheresYanni from "images/ministries/mulheres-yanni.png";
 import musica from "images/ministries/musica.png";
 import jni from "images/ministries/jni.png";
+import dni from "images/ministries/dni.png";
 
 export const ministries = [
   {
@@ -92,16 +93,17 @@ export const ministries = [
     contact: "https://wa.me/5511989301207",
   },
   {
+    image: dni,
     title: {
-      short: "MEDDI",
-      full: "MEDDI - Ministério da Escola Dominical e Discipulado Internacional",
+      short: "DNI",
+      full: "DNI - Discipulado Nazareno Internacional",
     },
     description: {
-      short: "Escola Dominical e Discipulado Internacional",
-      full: "Fomos enviados ao mundo e respondemos ao chamado de Cristo. Somos capacitados pelo Espírito Santo, para proclamar o Evangelho da Graça e cooperar ativamente na edificação da Igreja e na expansão do Reino Eterno do SENHOR.",
+      short: "Discipulado Nazareno Internacional",
+      full: "O DNI (Discipulado Nazareno Internacional) é composto por escola dominical, estudos biblicos, pequenos grupos, escola bíblica de férias, seminário teológico e até podcasts... Todas essas atividades de uma igreja local compõe a atividade do MEDDI. A Missão do MEDDI é cumprir a Grande Comissão entre crianças, jovens e adultos, em preparação para ser discípulos e fazer discípulos de Cristo nas nações. Com base nessa missão fica claro que o que se espera de cada crente é que se torne um discípulo de Cristo e faça outros discípulos. A ordem do Senhor foi: “Portanto, vão e façam discípulos de todas as nações [...], ensinando-os a obedecer a tudo o que eu lhes ordenei” (Mt 28:19-20).",
     },
-    responsible: "Pastor Denis Alves",
-    contact: "mailto:prdenisalves1988@gmail.com",
+    responsible: "Denis Alves",
+    contact: "https://wa.me/5511947645030",
   },
 
   // took form the app:
