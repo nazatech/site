@@ -11,16 +11,16 @@ export const ministries = [
   {
     image: jni,
     title: {
-      short: "JNI",
-      full: "JNI - Jovens Nazarenos Internacional",
+      short: "Jovens",
+      full: "Juventude Nazarena Internacional",
     },
     description: {
       short:
         "Integrar, treinar e capacitar jovens para o envolvimento no reino de Deus",
-      full: "O ministério JNI existe para atrair jovens e integra-los no serviço do reino de Deus, envolvendo no evangelismo levando o evangelho do reino, no discipulado aprendendo a importância dos jovens no trabalho cristão e também no preparo para liderança acreditando que os jovens serão os futuros líderes da igreja de amanhã.",
+      full: "Somos a JNI distrito Barueri, Este ministério trabalha para atrair, treinar e capacitar os jovens no serviço do Reino de Deus, facilitando sua integração á igreja como corpo de Cristo. Desejamos ver uma geração de jovens discípulos semelhantes a Cristo. A JNI carrega como objetivo promover o crescimento desses jovens discípulos na vida cristã.",
     },
-    responsible: "Pastor Alexandre",
-    contact: "https://wa.me/5511984672997",
+    responsible: "Igor Pereira",
+    contact: "https://wa.me/5511995127660",
   },
   {
     image: nazateen,
