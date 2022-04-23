@@ -102,7 +102,7 @@ export const ministries = [
     },
     description: {
       short: "Discipulado Nazareno Internacional",
-      full: "O DNI (Discipulado Nazareno Internacional) é composto por escola dominical, estudos biblicos, pequenos grupos, escola bíblica de férias, seminário teológico e até podcasts... Todas essas atividades de uma igreja local compõe a atividade do MEDDI. A Missão do MEDDI é cumprir a Grande Comissão entre crianças, jovens e adultos, em preparação para ser discípulos e fazer discípulos de Cristo nas nações. Com base nessa missão fica claro que o que se espera de cada crente é que se torne um discípulo de Cristo e faça outros discípulos. A ordem do Senhor foi: “Portanto, vão e façam discípulos de todas as nações [...], ensinando-os a obedecer a tudo o que eu lhes ordenei” (Mt 28:19-20).",
+      full: "O DNI (Discipulado Nazareno Internacional) é composto por escola dominical, estudos biblicos, pequenos grupos, escola bíblica de férias, seminário teológico e até podcasts... Todas essas atividades de uma igreja local compõe a atividade do DNI. A Missão do DNI é cumprir a Grande Comissão entre crianças, jovens e adultos, em preparação para ser discípulos e fazer discípulos de Cristo nas nações. Com base nessa missão fica claro que o que se espera de cada crente é que se torne um discípulo de Cristo e faça outros discípulos. A ordem do Senhor foi: “Portanto, vão e façam discípulos de todas as nações [...], ensinando-os a obedecer a tudo o que eu lhes ordenei” (Mt 28:19-20).",
     },
     responsible: "Denis Alves",
     contact: "https://wa.me/5511947645030",
