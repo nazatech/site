@@ -6,6 +6,7 @@ import mulheresYanni from "images/ministries/mulheres-yanni.png";
 import musica from "images/ministries/musica.png";
 import jni from "images/ministries/jni.png";
 import dni from "images/ministries/dni.png";
+import nazakids from "images/ministries/nazakids.png";
 
 export const ministries = [
   {
@@ -131,33 +132,46 @@ export const ministries = [
     contact: "tel:+5511980134569",
   },
   {
+    image: nazakids,
     title: {
-      short: "Naza Kids",
-      full: null,
+      short: "Nazakids",
+      full: "Nazakids",
     },
     description: {
+      short: "Cuidando do coração das criancas",
       full: (
         <article>
           <p className="mb-2">
-            Nós do Ministério Infantil, somos responsáveis pelo ensino voltado
-            às crianças. Além disso, temos a função de ensinar a palavra de Deus
-            para os pequeninos. Durante nossa escola Bíblica e culto infantil,
-            interagimos através da oração, histórias bíblicas, louvor,
-            testemunhos, atividades e brincadeiras. Tudo isso para o crescimento
-            e desenvolvimento da criança no Reino de Deus. Pois os pequenos de
-            hoje, serão o futuro da igreja, por isso trabalhamos com muito amor
-            e dedicação.
-          </p>
-          <p className="mb-2">
-            O departamento infantil, trabalha com as crianças de 3 a 11 anos
+            Ministério voltado para o ensino das crianças de nossa igreja.
+            Compreendendo também a nossa EBD. Atuando com as idades de 0 a 10
+            anos.
           </p>
           <p>
-            Atuação: Área do louvor, Culto infantil com versículos e histórias
-            bíblicas
+            <b>Possuímos 3 faixas etárias:</b>
+          </p>
+          <ul className="mb-2">
+            <li>2 e 3 anos MATERNAL</li>
+            <li>4 A 6 anos PRE PRIMÁRIOS</li>
+            <li>7 a 10 anos PRIMÁRIO</li>
+          </ul>
+          <p>
+            <b>GRUPO DE LOUVOR, DANÇA E TEATRO</b>
+          </p>
+          Nossa missão é Ministrar e ensinar o amor de Jesus às crianças desde
+          sua mais tenra idade, visando formar uma base sólida no coração delas.
+          Procuramos trabalhar os fundamentos da Bíblia seguindo a linguagem e
+          compreensão de cada idade, para que as crianças entendam e se firmem
+          na palavra de Deus.
+          <p>
+            <p>
+              Nossa equipe é formada professoras dedicadas e que têm amor pela
+              vida de cada uma das nossas crianças.
+            </p>
+            <p>Nazakids trabalhando para o crescimento das crianças</p>
           </p>
         </article>
       ),
     },
-    responsible: "Sirlene Paradela",
+    responsible: "Alessandra Melo",
   },
 ];
