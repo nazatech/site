@@ -6,6 +6,7 @@ import mulheresYanni from "images/ministries/mulheres-yanni.png";
 import musica from "images/ministries/musica.png";
 import jni from "images/ministries/jni.png";
 import dni from "images/ministries/dni.png";
+import mni from "images/ministries/mni.png";
 import nazakids from "images/ministries/nazakids.png";
 
 export const ministries = [
@@ -109,16 +110,17 @@ export const ministries = [
 
   // took form the app:
   {
+    image: mni,
     title: {
       short: "MNI",
       full: "MNI - Missões Nazarenas Internacionais",
     },
     description: {
-      short: "Missões Nazarenas Internacionais",
+      short: "Transformar pessoas comuns em autênticos discípulos de Cristo.",
       full: (
         <article>
           <p>
-            É através da Missões Nazarenas Internacionais (MNI) que podemos
+            É através das missões Nazarenas Internacionais (MNI) que podemos
             ativar, estimular e acelerar a missão local. Nosso propósito é levar
             as boas novas de uma forma simples e objetiva para aqueles que ainda
             não compreenderam a mensagem da salvação. O desafio da grande
@@ -129,7 +131,7 @@ export const ministries = [
       ),
     },
     responsible: "Almino Oliveira",
-    contact: "tel:+5511980134569",
+    contact: "https://wa.me/5511980134569",
   },
   {
     image: nazakids,
