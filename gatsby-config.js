@@ -27,11 +27,8 @@ module.exports = {
         trackingIds: [website.googleAnalyticsID],
         // This object is used for configuration specific to this plugin
         pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: false,
-          // Avoids sending pageview hits from custom paths
-          // exclude: ["/preview/**", "/do-not-track/me/too/"],
-          origin: "https://nazarenobarueri.com.br",
+          head: true,
+          anonymize_ip: true,
         },
       },
     },
