@@ -31,7 +31,7 @@ module.exports = {
           head: false,
           // Avoids sending pageview hits from custom paths
           // exclude: ["/preview/**", "/do-not-track/me/too/"],
-          origin: "http://nazarenobarueri.com.br",
+          origin: "https://nazarenobarueri.com.br",
         },
       },
     },
