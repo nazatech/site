@@ -21,11 +21,21 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: website.googleAnalyticsID,
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [website.googleAnalyticsID],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: false,
+          // Avoids sending pageview hits from custom paths
+          // exclude: ["/preview/**", "/do-not-track/me/too/"],
+          origin: "http://nazarenobarueri.com.br",
+        },
       },
     },
+
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
