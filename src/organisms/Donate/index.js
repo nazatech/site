@@ -8,7 +8,7 @@ import qrCode from "images/qr-code.png";
 const Donate = () => {
   return (
     <Section title="Dízimos e ofertas" id="contribua" withContainer={true}>
-      <div className="flex flex-col md:flex-row md:flex-wrap lg:grid lg:grid-cols-3 lg:gap-9">
+      <div className="flex flex-col md:flex-row md:flex-wrap lg:grid lg:grid-cols-3 lg:gap-20">
         <AnimateOnScrollOver>
           <div className="pb-11">
             <article>
@@ -21,7 +21,7 @@ const Donate = () => {
             </article>
           </div>
         </AnimateOnScrollOver>
-        <AnimateOnScrollOver className="lg:ml-auto md:mr-10 lg:mr-0">
+        {/* <AnimateOnScrollOver className="lg:ml-auto md:mr-10 lg:mr-0">
           <div className="mb-10 flex ">
             <ItauLogo className="mr-4 mt-2" />
             <article>
@@ -32,7 +32,7 @@ const Donate = () => {
               <p>CNPJ 59.837.948/0001-49</p>
             </article>
           </div>
-        </AnimateOnScrollOver>
+        </AnimateOnScrollOver> */}
         <AnimateOnScrollOver>
           <div className="flex">
             <PixLogo className="mr-4 mt-2" />
