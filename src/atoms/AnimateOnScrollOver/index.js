@@ -62,9 +62,8 @@ const AnimateOnScrollOver = ({
   }, [animate, beforeAnimate, className]);
 
   return (
-    <div className={classNames} ref={ref}>
-      {children}
-    </div>
+    // <div className={classNames} ref={ref}>
+    <div>{children}</div>
   );
 };
 
