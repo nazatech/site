@@ -78,7 +78,7 @@ const Menu = () => {
         <div className="pt-20 lg:pt-0">
           <LinkWrap className={isOpen ? "right-0" : "-right-10"}>
             <Href onClick={closeMenu} href="#quem-somos">
-              Quem Somos
+              Quem somos
             </Href>
           </LinkWrap>
           <LinkWrap className={isOpen ? "right-0" : "-right-16"}>

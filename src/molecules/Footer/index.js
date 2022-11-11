@@ -18,7 +18,7 @@ const Footer = () => {
       <AnimateOnScrollOver>
         <Container>
           <div className="mb-5 flex flex-wrap">
-            <Href href="#quem-somos">Quem Somos</Href>
+            <Href href="#quem-somos">Quem somos</Href>
             <Href href="#ministerios">Ministérios</Href>
             <Href href="#cultos">Cultos</Href>
             <Href href="#projetos-sociais">Projetos Sociais</Href>
