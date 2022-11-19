@@ -1,54 +1,47 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Site Da Igreja do Nazareno Central de Barueri
 
-## 🚀 Quick start
+Antes de mais nada, garanta que vc tenha instalado:
 
-1.  **Create a Gatsby site.**
+- node
+- git 
+- yarn 
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
 
-2.  **Start developing.**
+## 🚀 Bora começar
 
-    Navigate into your new site’s directory and start it up.
+No terminal, clone o repositório:
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+```
+git clone https://github.com/nazatech/site.git
+```
 
-3.  **Open the code and start customizing!**
+Abra no VSCode:
 
-    Your site is now running at http://localhost:8000!
+```
+code site
+``` 
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+No VSCode, abra o terminal integrado e rode:
+```
+yarn 
+```
+E então:
+```
+yarn start 
+```
 
-4.  **Learn more**
+É isso! 
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Comece a fuçar o projeto a partir do arquivo `src/pages/index.js`. É a partir dele que a página principal do site é iniciada.
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+O site da Nazareno utiliza as seguintes tecnologias:
+- GatsbyJS [site oficial]
+  - [site](https://www.gatsbyjs.com/)
+  - [um tutorial simples de como começar a criar uma página](https://www.youtube.com/watch?v=QQuA79005zo&list=PLN9uKzK0o3GR3ky2Q6zc2v0Dlej3oOBtT&index=3)
+- TailwindCSS
+  - [site ](https://tailwindcss.com/)
+  - [onde começar a fuçar](https://play.tailwindcss.com/)
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
