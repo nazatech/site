@@ -21,7 +21,7 @@ const Donate = () => {
             </article>
           </div>
         </AnimateOnScrollOver>
-        {/* <AnimateOnScrollOver className="lg:ml-auto md:mr-10 lg:mr-0">
+        <AnimateOnScrollOver className="lg:ml-auto md:mr-10 lg:mr-0">
           <div className="mb-10 flex ">
             <ItauLogo className="mr-4 mt-2" />
             <article>
@@ -32,7 +32,7 @@ const Donate = () => {
               <p>CNPJ 59.837.948/0001-49</p>
             </article>
           </div>
-        </AnimateOnScrollOver> */}
+        </AnimateOnScrollOver>
         <AnimateOnScrollOver>
           <div className="flex">
             <PixLogo className="mr-4 mt-2" />
@@ -40,7 +40,7 @@ const Donate = () => {
               <h4 className="font-extrabold text-2xl ">Pix</h4>
               <p>Utilize o nosso e-mail:</p>
               <p className="mb-2"> nazarenobarueri@gmail.com</p>
-              {/* <img src={qrCode} alt="QR Code para o Pix da Nazareno Barueri" /> */}
+              <img src={qrCode} alt="QR Code para o Pix da Nazareno Barueri" />
             </article>
           </div>
         </AnimateOnScrollOver>
