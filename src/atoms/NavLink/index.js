@@ -6,12 +6,14 @@ const isBrowser = typeof window !== "undefined";
 const NavLink = ({ href, onClick, children }) => {
   const isActive = isBrowser ? href === window.location.pathname : false;
 
-  console.log("test>>>", {
-    isBrowser,
-    href,
-    windowLocationPathname: window.location.pathname,
-    isActive,
-  });
+  if (isBrowser) {
+    console.log("test>>>", {
+      isBrowser,
+      href,
+      windowLocationPathname: window.location.pathname,
+      isActive,
+    });
+  }
 
   return (
     <a
