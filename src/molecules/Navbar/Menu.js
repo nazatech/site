@@ -80,7 +80,7 @@ const Menu = () => {
       <AnimateOnScrollOver delay={{ all: 1000 }}>
         <div className="pt-20 lg:pt-0">
           <LinkWrap className={isOpen ? "right-0" : "-right-10"}>
-            <NavLink onClick={closeMenu} href="/louvores">
+            <NavLink onClick={closeMenu} href="/louvores/">
               Louvores
             </NavLink>
           </LinkWrap>
