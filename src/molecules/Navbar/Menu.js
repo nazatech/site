@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { AnimateOnScrollOver } from "atoms";
 import { useMenu } from "hooks";
 import { isDesktop } from "utils";
+import { NavLink } from "atoms";
 
 const LinkWrap = ({ children, last, className }) => {
   return (
@@ -22,7 +23,9 @@ const isBrowser = typeof window !== "undefined";
 const Href = ({ children, href, onClick }) => {
   const [isActive, setIsActive] = useState(false);
 
-  const target = isBrowser ? document.querySelector(`${href}`) : {};
+  const target = isBrowser
+    ? document.querySelector(`${href.replaceAll("/", "")}`)
+    : {};
 
   const onScroll = () => {
     const bounding = target?.getBoundingClientRect();
@@ -77,27 +80,32 @@ const Menu = () => {
       <AnimateOnScrollOver delay={{ all: 1000 }}>
         <div className="pt-20 lg:pt-0">
           <LinkWrap className={isOpen ? "right-0" : "-right-10"}>
-            <Href onClick={closeMenu} href="#quem-somos">
+            <NavLink onClick={closeMenu} href="/louvores">
+              Louvores
+            </NavLink>
+          </LinkWrap>
+          <LinkWrap className={isOpen ? "right-0" : "-right-10"}>
+            <Href onClick={closeMenu} href="/#quem-somos">
               Quem somos
             </Href>
           </LinkWrap>
           <LinkWrap className={isOpen ? "right-0" : "-right-16"}>
-            <Href onClick={closeMenu} href="#ministerios">
+            <Href onClick={closeMenu} href="/#ministerios">
               Ministérios
             </Href>
           </LinkWrap>
           <LinkWrap className={isOpen ? "right-0" : "-right-24"}>
-            <Href onClick={closeMenu} href="#cultos">
+            <Href onClick={closeMenu} href="/#cultos">
               Cultos
             </Href>
           </LinkWrap>
           <LinkWrap className={isOpen ? "right-0" : "-right-28"}>
-            <Href onClick={closeMenu} href="#contribua">
+            <Href onClick={closeMenu} href="/#contribua">
               Dízimos e ofertas
             </Href>
           </LinkWrap>
           <LinkWrap className={isOpen ? "right-0" : "-right-32"} last={true}>
-            <Href onClick={closeMenu} href="#contato">
+            <Href onClick={closeMenu} href="/#contato">
               Contato
             </Href>
           </LinkWrap>

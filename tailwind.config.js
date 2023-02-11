@@ -22,6 +22,7 @@ module.exports = {
         "black-50": "rgba(0, 0, 0, 0.50);",
         blue: "#002638",
         red: "#B3001B",
+        gray: "#DBE1E3",
       },
       keyframes: {
         scroll: {
