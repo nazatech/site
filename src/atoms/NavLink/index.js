@@ -1,8 +1,10 @@
 import React from "react";
 import clsx from "clsx";
 
+const isBrowser = typeof window !== "undefined";
+
 const NavLink = ({ href, onClick, children }) => {
-  const isActive = href === window.location.pathname;
+  const isActive = isBrowser ? href === window.location.pathname : false;
 
   return (
     <a
