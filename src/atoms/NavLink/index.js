@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 
 const isBrowser = typeof window !== "undefined";
 
 const NavLink = ({ href, onClick, children }) => {
-  const isActive = isBrowser ? href === window.location.pathname : false;
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    setIsActive(href === window.location.pathname);
+  }, [href]);
 
   if (isBrowser) {
     console.log("test>>>", {
