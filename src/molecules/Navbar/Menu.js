@@ -20,12 +20,15 @@ const LinkWrap = ({ children, last, className }) => {
 
 const isBrowser = typeof window !== "undefined";
 
-const Href = ({ children, href, onClick }) => {
+const Href = ({ children, href, onClick, targetBlank }) => {
   const [isActive, setIsActive] = useState(false);
 
-  const target = isBrowser
-    ? document.querySelector(`${href.replaceAll("/", "")}`)
-    : {};
+  const isLocalLink = !href.includes("http");
+
+  const target =
+    isBrowser && isLocalLink
+      ? document.querySelector(`${href.replaceAll("/", "")}`)
+      : null;
 
   const onScroll = () => {
     const bounding = target?.getBoundingClientRect();
@@ -59,6 +62,8 @@ const Href = ({ children, href, onClick }) => {
       )}
       href={href}
       onClick={onClick}
+      target={targetBlank ? "_blank" : "_self"}
+      rel="noreferrer"
     >
       {children}
     </a>
@@ -104,9 +109,18 @@ const Menu = () => {
               Dízimos e ofertas
             </Href>
           </LinkWrap>
-          <LinkWrap className={isOpen ? "right-0" : "-right-32"} last={true}>
+          <LinkWrap className={isOpen ? "right-0" : "-right-32"}>
             <Href onClick={closeMenu} href="/#contato">
               Contato
+            </Href>
+          </LinkWrap>
+          <LinkWrap className={isOpen ? "right-0" : "-right-32"} last={true}>
+            <Href
+              onClick={closeMenu}
+              href="https://app.enuves.com/"
+              targetBlank={true}
+            >
+              Login
             </Href>
           </LinkWrap>
         </div>
