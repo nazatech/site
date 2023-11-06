@@ -52,10 +52,7 @@ const Schedule = () => {
               <DecorativeLine />
             </div>
             <p>
-              <span className="font-extrabold">7h00 - </span> Oração
-            </p>
-            <p>
-              <span className="font-extrabold">8h45 - </span> Escola Bíblica
+              <span className="font-extrabold">8h00 - </span> Escola Bíblica
               Dominical
             </p>
             <p>
@@ -68,7 +65,7 @@ const Schedule = () => {
               <DecorativeLine />
             </div>
             <p>
-              <span className="font-extrabold">19h00 - </span> Culto
+              <span className="font-extrabold">10h00 - </span> Culto
             </p>
           </article>
         </div>
