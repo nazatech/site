@@ -28,7 +28,6 @@ module.exports = {
         // This object is used for configuration specific to this plugin
         pluginConfig: {
           head: true,
-          anonymize_ip: true,
         },
       },
     },
